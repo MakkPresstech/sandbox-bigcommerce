@@ -1,0 +1,81 @@
+{{!--
+<div class="banners" data-banner-location="top">
+        {{#each (limit banners.top_metadata 1)}}
+        <div class="banner" data-event-type="promotion" data-entity-id="{{this.id}}" data-name="{{this.banner-name}}" data-position="{{this.location}}" data-banner-id="{{this.banner-name}}">
+            <div data-event-type="promotion-click">
+                {{{this.content}}}
+            </div>
+        </div>
+        {{/each}}
+</div>
+--}}
+<div class="banner-top">
+    <div class="bannerr">
+        <div class="banner-content-holder">
+            <div class="center">
+                <ul>
+                <li class="first">FREE SHIPPING OVER $89</li>
+                <li class="special">30-DAY MONEY BACK GUARANTEE</li>
+                 <li class="special">15-YEAR STRIP LIGHT WARRANTY</li>
+                     <li class="special"><a href="https://www.flexfireleds.com/request-a-free-quote/">REQUEST A QUOTE HERE</a></li>
+
+                
+                </ul>
+            </div>
+            <div class="right-side">
+            <a href="tel:1-844-353-9347"> 
+            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            	 viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+            <path class="st1" d="M19.15,31.96c9.45,9.45,18.48,11.45,21.81,11.63c2.13-3.12,3.03-5.7,3.64-8c-2.3-2.24-5.65-4.53-8.73-5.82
+            	l-3.64,3.64c-1.24-0.33-4.65-1.74-8.73-5.82c-4.07-4.07-5.48-7.48-5.82-8.73l3.64-3.64c-1.29-3.07-3.58-6.42-5.82-8.73
+            	c-2.3,0.61-4.88,1.51-8,3.64C7.7,13.48,9.7,22.51,19.15,31.96z"/>
+            </svg>
+
+            1-844-353-9347</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<header id="header" class="header" role="banner">
+    <input type="hidden" id="apikey" value="{{settings.storefront_api.token}}">
+    <a href="#" class="mobileMenu-toggle" data-mobile-menu-toggle="menu">
+        <span class="mobileMenu-toggleIcon">Toggle menu</span>
+    </a>
+    {{> components/common/navigation}}
+
+    {{#if page_type '===' 'default'}}
+        <h1 class="header-logo header-logo--{{theme_settings.logo-position}}">
+            {{> components/common/store-logo}}
+        </h1>
+    {{else}}
+        <div class="header-logo header-logo--{{theme_settings.logo-position}}">
+            {{> components/common/store-logo}}
+        </div>
+    {{/if}}
+    {{{region name="header_bottom"}}}
+    <a class="navUser-action mobile-phone" href="tel:1-844-353-9347" title="Cart">    
+            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+            <path class="st1" d="M19.15,31.96c9.45,9.45,18.48,11.45,21.81,11.63c2.13-3.12,3.03-5.7,3.64-8c-2.3-2.24-5.65-4.53-8.73-5.82
+            	l-3.64,3.64c-1.24-0.33-4.65-1.74-8.73-5.82c-4.07-4.07-5.48-7.48-5.82-8.73l3.64-3.64c-1.29-3.07-3.58-6.42-5.82-8.73
+            	c-2.3,0.61-4.88,1.51-8,3.64C7.7,13.48,9.7,22.51,19.15,31.96z"></path>
+            </svg>
+    </a>
+    <a class="navUser-action mobile-cart" href="/cart.php" title="Cart">    
+        <span class="icon icon--custom icon--cart">
+            <svg viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <path d="M665.6 870.4c0 56.525 45.773 102.4 102.4 102.4 56.525 0 102.4-45.875 102.4-102.4 0-56.627-45.875-102.4-102.4-102.4-56.627 0-102.4 45.773-102.4 102.4zM153.6 870.4c0 56.525 45.824 102.4 102.4 102.4 56.474 0 102.4-45.875 102.4-102.4 0-56.627-45.926-102.4-102.4-102.4-56.576 0-102.4 45.773-102.4 102.4zM335.206 623.206l566.682-161.894c10.803-3.123 19.712-14.797 19.712-26.112v-281.6h-716.8v-81.92c0-11.264-9.267-20.48-20.429-20.48h-163.942c-11.213 0-20.429 9.216-20.429 20.48v81.92h102.4l97.792 458.598 4.608 48.282v84.429c0 11.213 9.216 20.48 20.48 20.48h675.84c11.264 0 20.48-9.318 20.48-20.48v-79.309h-575.898c-58.88 0-60.109-28.211-10.496-42.394z"></path>
+            </svg>
+        </span>
+        <span class="countPill cart-quantity">0</span>
+    </a>
+    <div class="navPages-container" id="menu" data-menu>
+        {{> components/common/navigation-menu}}
+    </div>
+            <input type="hidden" id="apikey" value="{{settings.storefront_api.token}}"/>
+
+</header>
+
+<div class="dropdown dropdown--quickSearch desktop-search" id="quickSearch" aria-hidden="true" tabindex="-1"   data-prevent-quick-search-close>
+    {{> components/common/quick-search}}
+</div>  

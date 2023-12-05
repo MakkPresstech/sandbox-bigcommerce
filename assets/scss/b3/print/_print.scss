@@ -1,0 +1,9 @@
+@media print {
+
+  .body {
+
+    .navBar.navBar--sub.navBar--account {
+      display: none !important;
+    }
+  }
+}

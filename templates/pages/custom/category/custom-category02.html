@@ -1,0 +1,142 @@
+---
+category:
+    shop_by_price: true
+    products:
+        limit: {{theme_settings.categorypage_products_per_page}}
+---
+{{inject "categoryProductsPerPage" theme_settings.categorypage_products_per_page}}
+{{#partial "head"}}
+    {{#if pagination.category.previous}}
+        <link rel="prev" href="{{pagination.category.previous}}">
+    {{/if}}
+    {{#if pagination.category.next}}
+        <link rel="next" href="{{pagination.category.next}}">
+    {{/if}}
+{{/partial}}
+
+{{#partial "page-full"}}
+    <div class="categoryText-overlay">
+        {{#if category.image}}
+            <img class="lazyload" data-sizes="auto" src="{{cdn 'img/loading.svg'}}" data-src="{{getImage category.image }}">
+        {{/if}} 
+        <div class="categoryText">
+            <h1>LED Strip Lights for Architectural, Residential, and Commercial Applications</h1>
+            <p>Flexfire LEDs' strip lights are extremely popular in many facets of lighting design thanks to their compact size, high brightness, and low power consumption. They are also extremely versatile, as shown by architects, homeowners, bars, restaurants, and countless others who are using them in every way imaginable.</p>
+            <a href="/what-are-led-strip-lights/" class="categoryButton">What are LED strip lights and what can they do?</a>
+            <a href="/top-4-considerations-before-buying-flexible-led-strip-lights/" class="categoryButton">Which LED strip light is best for my project?</a>
+        </div>
+    </div>
+    
+    <div class="categoryText-overlay-mobile" style="background-image: url('/product_images/uploaded_images/mobile-cat.jpg')">
+        <div class="categoryText">
+            <h1>LED Strip Lights for Architectural, Residential, and Commercial Applications</h1>
+            <p>Flexfire LEDs' strip lights are extremely popular in many facets of lighting design thanks to their compact size, high brightness, and low power consumption. They are also extremely versatile, as shown by architects, homeowners, bars, restaurants, and countless others who are using them in every way imaginable.</p>
+        </div>
+        <a href="/what-are-led-strip-lights/" class="categoryButton c-Button-01">What are LED strip lights and what can they do?</a>
+        <a href="/top-4-considerations-before-buying-flexible-led-strip-lights/" class="categoryButton c-Button-02">Which LED strip light is best for my project?</a>
+    </div>
+
+    
+    <div class="category-{{dashcase category.name}}">
+        <div class="container allproductsCategory">
+            <div class="page">
+               <div class="pagesLeft">
+                    <nav>
+                        <div class="sidebarBlock">
+                            <h5 class="sidebarBlock-heading">Categories</h5>
+                            <ul class="navList">
+                                {{#each categories}}
+                                <li class="navList-item">
+                                    {{#if children}}
+                                    {{!--     
+                                        <a href="{{url}}" class="navList-action has-toggle">{{name}}</a>
+                                        <a href="javascript:void(0)" class="nav-toggle normal" onclick="toggleClass('.navPages-{{id}}', 'show'); toggle(this);"><span class="plus">+</span></a>
+                                        --}}
+                                    <ul class="navPage-childList navPages-{{id}}">
+                                        {{#each children}}
+                                        <li class="navPage-childList-item">
+                                            {{#if children}}
+                                            <a class="navPage-childList-action navPages-action has-toggle"
+                                                href="{{url}}">{{name}}</a>
+                                            <a href="javascript:void(0)" class="nav-toggle normal"
+                                                onclick="toggleClass('.navPages-{{id}}', 'show'); toggle(this);"><span
+                                                    class="plus">+</span></a>
+                                            <ul class="navPage-grandchildList collapse navPages-{{id}}">
+                                                {{#each children}}
+                                                <li class="navPage-grandchildListList-item">
+                                                    {{#if children}}
+                                                    <a class="navPage-grandchildListList-action navPages-action has-toggle"
+                                                        href="{{url}}">{{name}}</a>
+                                                    <a href="javascript:void(0)" class="nav-toggle normal"
+                                                        onclick="toggleClass('.navPages-{{id}}', 'show'); toggle(this);"><span
+                                                            class="plus">+</span></a>
+                                                    <ul class="navPage-greatgrandchildList collapse navPages-{{id}}">
+                                                        {{#each children}}
+                                                        <li class="navPage-greatgrandchildListList-item">
+                                                            <a class="navPage-greatgrandchildListList-action navPages-action"
+                                                                href="{{url}}">{{name}}</a>
+                                                        </li>
+                                                        {{/each}}
+                                                    </ul>
+                                                    {{else}}
+                                                    <a class="navPage-grandchildListList-action navPages-action"
+                                                        href="{{url}}">{{name}}</a>
+                                                    {{/if}}
+                                                </li>
+                                                {{/each}}
+                                            </ul>
+                                            {{else}}
+                                            <a class="navPage-childList-action navPages-action" href="{{url}}">{{name}}</a>
+                                            {{/if}}
+                                        </li>
+                                        {{/each}}
+                                    </ul>
+                                    {{else}}
+                                    <a href="{{url}}" class="navList-action">{{name}}</a>
+                                    {{/if}}
+                                </li>
+                                {{/each}}
+                            </ul>
+                        </div>
+                    </nav>
+            
+                    <div class="left-banner">
+                        <h1>Ask Us.</h1>
+                        <ul style="list-style: none;">
+                            <li>Project Design Services</li>
+                            <li>Advice on Anything</li>
+                            <li>Project Assistance</li>
+                            <li>and More!</li>
+                        </ul>
+                        <p>Get It Free From Experts</p>
+                        <div class="c-button-holder"><a href="/ask-us-a-question/" class="c-button-primary"> Chat | Call | Schedule </a> </div>
+                        <div class="sideimg-holder"> </div>
+                    </div>
+                </div>
+                <div class="pagesRight">
+                    <h1 class="allproductsTitle">Shop by Series</h1>
+                    <main class="page-content" id="product-listing-container">
+                        {{{category.description}}}
+                        <div class="categoryProducts">
+                            {{#if category.products}}
+                            {{> components/category/product-listing}}
+                            {{else}}
+                            <!---!<p>{{lang 'categories.no_products'}}</p>!---!>
+                            {{/if}}
+                        </div>
+                    </main>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{{/partial}}
+
+{{> layout/base}}
+
+
+<style>
+    .body {
+        margin: 0 auto;
+    }
+</style>

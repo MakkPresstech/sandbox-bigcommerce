@@ -1,0 +1,122 @@
+
+{{#partial "page"}}
+
+{{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+
+<main class="page">
+    {{#unless theme_settings.hide_page_heading }}
+        <h1 class="page-heading">{{ page.title }}</h1>
+    {{/unless}}
+
+    {{!-- BundleB2B: page-heading is required --}}
+    <h1 class="page-heading b3_page_heading" style="display: none;">{{ page.title }}</h1>
+
+{{!--
+    {{#if page.sub_pages}}
+    <nav class="navBar navBar--sub">
+        <ul class="navBar-section account-navigation">
+        {{#each page.sub_pages}}
+            <li class="navBar-item"><a class="navBar-action" href="{{url}}">{{title}}</a></li>
+        {{/each}}
+        </ul>
+    </nav>
+    {{/if}}
+    --}}   
+    
+    {{{region name="home_below_carousel"}}}
+    <div class="pagesLeft">
+    <nav>  
+    
+    <div class="sidebarBlock">
+            <h5 class="sidebarBlock-heading">Categories</h5>
+            <ul class="navList">
+                {{#each categories}}
+                <li class="navList-item">
+                    {{#if children}}
+               {{!--     
+                    <a href="{{url}}" class="navList-action has-toggle">{{name}}</a>
+                    <a href="javascript:void(0)" class="nav-toggle normal" onclick="toggleClass('.navPages-{{id}}', 'show'); toggle(this);"><span class="plus">+</span></a>
+                    --}}     
+                    <ul class="navPage-childList navPages-{{id}}">
+                        {{#each children}}
+                        <li class="navPage-childList-item">
+                            {{#if children}}
+                            <a class="navPage-childList-action navPages-action has-toggle" href="{{url}}">{{name}}</a>
+                            <a href="javascript:void(0)" class="nav-toggle normal" onclick="toggleClass('.navPages-{{id}}', 'show'); toggle(this);"><span class="plus">+</span></a>
+                            <ul class="navPage-grandchildList collapse navPages-{{id}}">
+                                {{#each children}}
+                                    <li class="navPage-grandchildListList-item">
+                                        {{#if children}}
+                                        <a class="navPage-grandchildListList-action navPages-action has-toggle" href="{{url}}">{{name}}</a>
+                                        <a href="javascript:void(0)" class="nav-toggle normal" onclick="toggleClass('.navPages-{{id}}', 'show'); toggle(this);"><span class="plus">+</span></a>
+                                        <ul class="navPage-greatgrandchildList collapse navPages-{{id}}">
+                                            {{#each children}}
+                                            <li class="navPage-greatgrandchildListList-item">
+                                                <a class="navPage-greatgrandchildListList-action navPages-action" href="{{url}}">{{name}}</a>
+                                            </li>
+                                            {{/each}}
+                                        </ul>
+                                        {{else}}
+                                        <a class="navPage-grandchildListList-action navPages-action" href="{{url}}">{{name}}</a>
+                                        {{/if}}
+                                    </li>
+                                {{/each}}
+                            </ul>
+                            {{else}}
+                            <a class="navPage-childList-action navPages-action" href="{{url}}">{{name}}</a>
+                            {{/if}}
+                        </li>
+                        {{/each}}
+                    </ul>
+                    {{else}}
+                    <a href="{{url}}" class="navList-action">{{name}}</a>
+                    {{/if}}
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+</nav>
+
+ {{{region name="home_below_featured_products"}}}
+
+<div class=" left-banner">
+        <h1>Ask Us.</h1>
+        <ul style="list-style: none;">
+            <li>Project Design Services</li>
+            <li>Advice on Anything</li>
+            <li>Project Assistance</li>
+            <li>and More!</li>
+        </ul>
+        <p>Get It Free From Experts</p>
+        <div class="c-button-holder"><a href="/ask-us-a-question/" class="c-button-primary"> Chat | Call | Schedule </a> </div>
+        <div class="sideimg-holder"> </div>
+        
+</div>
+</div>
+<div class="pagesRight cc-pages">
+    <div class="page-content page-content--centered">
+        {{#replace '%%Syndicate%%' page.content}}
+            {{> components/page/rss_feed}}
+        {{else}}
+            <p>{{{page.content}}}</p>
+        {{/replace}}
+    </div>
+
+    {{#if page.feed}}
+        <ul>
+            {{#each page.feed}}
+                <li>
+                    <h6><a href="{{url}}" target="_blank">{{title}}</a></h6>
+                    <p>{{content}}</p>
+                </li>
+            {{/each}}
+        </ul>
+    {{/if}}
+    
+</main>
+
+</div>
+ {{{region name="home_below_new_products"}}}
+{{/partial}}
+
+{{> layout/base}}

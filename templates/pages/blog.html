@@ -1,0 +1,924 @@
+---
+blog:
+    posts:
+        limit: 100
+        pages: 100
+        summary: 200
+---
+{{#partial "page"}}
+
+{{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+            
+<main class="page">
+    <div class="blog-top-header">
+        <img class="desktop" src="https://cdn11.bigcommerce.com/s-coffa3m5zp/images/stencil/original/image-manager/flexbnannerblog.jpg" />
+        <img class="mobile" src="https://cdn11.bigcommerce.com/s-coffa3m5zp/images/stencil/original/image-manager/flexbnannerblog.jpg" />
+        {{#unless theme_settings.hide_blog_page_heading }}
+            <h1 class="page-heading">{{ blog.name }}</h1>
+        {{/unless}}
+    </div>
+     
+    <div class="blog-post-tab">
+        <div class="header-design">
+            <h2>Browse Articles</h2>
+        </div>
+        <div class="blog-tags">
+            <ul class="tag-design">
+                <li class="tag-list"> <a href="/blog/">All Articles</a></li>
+                <li class="tag-list " {{#each blog.posts}}
+                        {{#if this.tags}}
+                          {{#each this.tags}}
+                            {{#if name '===' "lighting-projects"}}
+                                active
+                            {{/if}}
+                          {{/each}}
+                        {{/if}}
+                    {{/each}}> <a href="/blog/tag/lighting-projects">Lighting Projects</a></li>
+                <li class="tag-list " {{#each blog.posts}}
+                        {{#if this.tags}}
+                          {{#each this.tags}}
+                            {{#if name '===' "installation"}}
+                                active
+                            {{/if}}
+                          {{/each}}
+                        {{/if}}
+                    {{/each}}> <a href="/blog/tag/installation">Installation</a></li>
+                <li class="tag-list " {{#each blog.posts}}
+                        {{#if this.tags}}
+                          {{#each this.tags}}
+                            {{#if name '===' "products"}}
+                                active
+                            {{/if}}
+                          {{/each}}
+                        {{/if}}
+                    {{/each}}> <a href="/blog/tag/products">Products</a></li>
+                <li class="tag-list " {{#each blog.posts}}
+                        {{#if this.tags}}
+                          {{#each this.tags}}
+                            {{#if name '===' "home-&-DIY"}}
+                                active
+                            {{/if}}
+                          {{/each}}
+                        {{/if}}
+                    {{/each}}> <a href="/blog/tag/home-&-DIY">Home & DIY</a></li>
+                <li class="tag-list " {{#each blog.posts}}
+                        {{#if this.tags}}
+                          {{#each this.tags}}
+                            {{#if name '===' "inspiration"}}
+                                active
+                            {{/if}}
+                          {{/each}}
+                        {{/if}}
+                    {{/each}}> <a href="/blog/tag/inspiration">Inspiration</a></li>
+                <li class="tag-list " {{#each blog.posts}}
+                        {{#if this.tags}}
+                          {{#each this.tags}}
+                            {{#if name '===' "our-company"}}
+                                active
+                            {{/if}}
+                          {{/each}}
+                        {{/if}}
+                    {{/each}}> <a href="/blog/tag/our-company">Our Company</a></li>
+                    <li class="tag-list " {{#each blog.posts}}
+                        {{#if this.tags}}
+                          {{#each this.tags}}
+                            {{#if name '===' "partners-&-pros"}}
+                                active
+                            {{/if}}
+                          {{/each}}
+                        {{/if}}
+                    {{/each}}> <a href="/blog/tag/partners-&-pros">Partners & Pros</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <hr/>
+    
+    <div class="blog-page-list-design paginatorbloglist">
+        {{#each blog.posts }}
+                {{> components/blog/post post=this}}
+        {{/each}}
+    </div>
+    
+    <div class="blog-page-custom-navigation" id="pagination">
+        <button id="prev-button-js">
+            <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 1L1 6L6 11" stroke="#3D3D3D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+        <div id="page-numbers"></div>
+        <button id="next-button-js">
+            <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L6 6L1 11" stroke="#3D3D3D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+        <span class="blog-page-list-paginate" id="paginate-list"></span>
+    </div>
+    
+    <!--<div class="blog-page-pagination">-->
+    <!--    {{> components/common/paginator pagination.blog}}-->
+    <!--</div>-->
+    
+    
+    <div class="custom-blog-form-section">
+        <div class="custom-blog-design">
+            <div class="heading">
+                <h2>Subscribe to Our Newsletter an Get an 10% Instant Coupon</h2>
+            </div>
+            <div class="form-blog">
+                <div>
+                    <div style="margin-left:10%"; "margin-right: 5%">
+                        <table style="width: 90%;" border="0" align="center">
+                            <tbody>
+                                <tr>
+                                    <td>&nbsp;</td>
+                                    <td>
+                                        <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+                                        <script>
+                                        hbspt.forms.create({
+                                        region: "na1",
+                                        portalId: "4711502",
+                                        formId: "03b494bb-fb63-440c-a0db-df523f8005cd"
+                                        });
+                                        </script>
+                                    </td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="blog-footer">
+        <div class="footer-blog-section">
+            <div class="img">
+                <img src="https://cdn11.bigcommerce.com/s-coffa3m5zp/images/stencil/original/image-manager/rectangle-35.png" />
+            </div>
+            <div class="content">
+                <h2>Our project design team is here to assist</h2>
+                <p>Our Flexfire LEDs team is made up of lighting experts that can assist whether you need a custom or out of the box lighting solution. We are always here to offer professional lighting advice, project design help, and product selection assistance. Please contact us with any lighting question or project need.</p>
+                <a href="">Chat With Us</a>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+<style>
+.page_type__blog .pagetype-blog .container {
+    max-width: 100%;
+    padding: 0px;
+}
+.page_type__blog .container main.page {
+    margin: 0!important;
+}
+.blog-top-header {
+    position: relative;
+}
+.blog-top-header .page-heading {
+    position: absolute;
+    top: 0;
+    font-size: 40px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0;
+    color: #fff;
+}
+.blog-post-tab {
+    max-width: 151.71429rem;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 5rem 8rem 0;
+}
+.blog-post-tab .header-design h2 {
+    color: #000;
+    line-height: 135%;
+    font-size: 28px;
+}
+.blog-post-tab .tag-design {
+    list-style: none;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 15px;
+    column-gap: 10px;
+    
+}
+.blog-post-tab .tag-design .tag-list a {
+    color: #1d1d1f;
+    border: 1px solid #1d1d1f;
+    float: left;
+    display: block;
+    border-radius: 50px;
+    padding: 5px 20px;
+    margin: 0px;
+}
+.blog-post-tab .tag-design .tag-list:first-child a {
+    margin-left: 0px;
+}
+.blog-post-tab .tag-design .tag-list:last-child a {
+    margin-right: 0;
+}
+.blog-post-tab .tag-design .tag-list[active] a {
+    background: #2c4ecf;
+    color: #fff;
+    border-color: #2c4ecf;
+}
+
+.blog-top-header{
+    height: 220px;
+}
+
+.blog-top-header img.desktop{
+    width: 100%;
+    height: 100%;
+}
+
+.blog-post-tab .blog-tags{
+    padding: 15px 0;
+}
+
+.blog-page-list-design {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 20px;
+    row-gap: 40px;
+    text-align: left;
+    margin: 1rem auto 5rem;
+    padding: 2rem 8rem 0;
+    max-width: 151.71429rem;
+    max-width: 1240px;
+}
+.blog-page-list-design article.blog {
+    border-top: 0px solid #e8e8e8;
+    margin: 0;
+    padding: 0;
+}
+.blog-page-list-design article.blog .blog-post-body {
+    text-align: left;
+    width: 100%;
+}
+.blog-page-list-design .date-tag {
+    display: none;
+}
+.blog-page-list-design article.blog .blog-post-figure {
+    width: 100%;
+    margin-bottom: 15px;
+}
+.blog-page-list-design article.blog .blog-post-figure .blog-thumbnail {
+    margin: 0!important;
+    width: 100%;
+    max-width: 100%;
+}
+.blog-page-list-design article.blog .blog-post-figure .blog-thumbnail:after {
+    display: none;
+}
+.blog-page-list-design article.blog .blog-post-figure .blog-thumbnail a {
+    display: block;
+}
+.blog-page-list-design article.blog .blog-post-figure .blog-thumbnail img {
+    position: inherit;
+    width: 100%;
+}
+.blog-page-list-design article.blog .blog-post-body .blog-title {
+    margin: 0 0 16px;
+    font-size: 24px;
+    line-height: 135%;
+    min-height: 64px;
+}
+.blog-page-list-design article.blog .blog-post-body .blog-title a {
+    color: #000;
+}
+.blog-page-list-design article.blog .blog-post-body .blog-date-author-box {
+    color: #545454;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+}
+.blog-page-list-design article.blog .blog-post-body .blog-date {
+    text-align: left;
+    font-weight: 400;
+    color: #545454;
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+.blog-page-list-design article.blog .blog-post-body .blog-post a {
+    display: flex;
+    margin-top: 16px;
+    gap: 5px;
+    align-items: center;
+    color: #00f;
+    font-weight: 500;
+}
+.blog-page-pagination {
+    margin: 0px 0px 5rem;
+}
+.blog-page-list-design article.blog .blog-post-body .blog-post p {
+    color: #3D3D3D;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+}
+.blog-page-pagination .pagination-list {
+    max-width: fit-content;
+    margin: 0 auto;
+}
+.blog-page-pagination .pagination-list .pagination-item {
+    border: 0px;
+}
+.blog-page-pagination .pagination-list .pagination-item .pagination-link {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+}
+.blog-page-pagination .pagination-list .pagination-item--current .pagination-link {
+    background: #2c4ecf;
+    color: #fff;
+}
+.blog-page-pagination .pagination-list .pagination-item:hover .pagination-link {
+    background: #2c4ecf;
+    color: #fff;
+}
+.blog-page-pagination .pagination-list .pagination-item .pagination-link svg {
+    fill: #575454;
+}
+.blog-page-pagination .pagination-list .pagination-item:hover .pagination-link svg {
+    fill: #fff;
+}
+
+span.blog-post-author {
+    margin-left: 4px;
+    display: inline-block;
+}
+
+span.blog-date-published {
+    margin-right: 4px;
+    display: inline-block;
+}
+
+.newsletter-home.blog-form {
+    background: #DEDFEA;
+    padding: 5rem 0;
+}
+
+.newsletter-home.blog-form:before{
+    content: unset;
+}
+
+.newsletter-home.blog-form h2{
+    margin-bottom: 20px;
+}
+
+.blog-footer {
+    background: #f6f7fa;
+}
+.footer-blog-section {
+    padding: 3rem 8rem 0;
+    max-width: 151.71429rem;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.footer-blog-section .img {
+    width: 100%;
+    max-width: 50%;
+}
+.footer-blog-section .content {
+    width: 100%;
+    max-width: 50%;
+}
+.footer-blog-section .content h2 {
+    font-weight: 500;
+    color: #1D1D1F;
+    font-size: 24px;
+    margin-bottom: 20px;
+    line-height: 135%;
+    letter-spacing: 0.319px;
+}
+.footer-blog-section .content p {
+    color: #3D3D3D;
+    font-weight: 400;
+    line-height: 24px;
+    font-size: 14px;
+}
+.footer-blog-section .content a {
+    border: 1px solid #1D1D1F;
+    color: #1D1D1F;
+    display: block;
+    width: 100%;
+    max-width: max-content;
+    text-align: center;
+    padding: 12px 24px;
+    border-radius: 50px;
+    margin-top: 30px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 135%;
+    letter-spacing: 0.319px;
+    transition: all 0.4s ease-in-out;
+}
+
+
+.custom-blog-form-section {
+    background: #dedfea;
+}
+.custom-blog-form-section .custom-blog-design {
+    padding: 4rem 8rem 4rem;
+    max-width: 151.71429rem;
+    margin: 0 auto;
+    text-align: center;
+}
+.custom-blog-design .heading h2 {
+    color: #000;
+    margin-bottom: 25px;
+}
+.hs-form-03b494bb-fb63-440c-a0db-df523f8005cd_b26a6199-f27b-4781-adc8-e693ab1a1ff0.hs-form {
+    width: 100%;
+}
+
+.blog-page-custom-navigation .blog-page-list-paginate {
+    grid-column: span 3;
+    text-align: center;
+    grid-row: 2;
+    padding: 10px 0 0;
+}
+
+.page_type__blog .newsletter-home.custom-form-background {
+    display: none;
+}
+
+
+.page_type__blog footer.footer {
+    border-top: 0;
+}
+
+.blog-page-custom-navigation {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 30px 0 60px;
+    grid-template-columns: minmax(40px,max-content) auto minmax(40px,max-content);
+    max-width: 151.71429rem;
+    margin: 0 auto;
+}
+
+.blog-page-custom-navigation button[disabled] {
+    display: none;
+}
+
+.blog-page-custom-navigation #prev-button-js{
+    grid-column: 1;
+}
+
+.blog-page-custom-navigation #page-numbers{
+    grid-column: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+
+.blog-page-custom-navigation #page-numbers .page-number{
+    display: flex;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.blog-page-custom-navigation button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: block;
+    padding: 0;
+}
+
+.blog-page-custom-navigation button:hover svg path{
+    stroke: #ffffff;
+}
+
+.blog-page-custom-navigation #page-numbers .page-number.active,
+.blog-page-custom-navigation #page-numbers .page-number:hover,
+.blog-page-custom-navigation button:hover{
+    background: #2C4ECF;
+    color: #ffffff;
+}
+
+.blog-page-custom-navigation #next-button-js{
+    grid-column: 3;
+}
+
+.blog-page-list-design .blog-post-author ul.tags{
+    margin: 0;
+    display: flex;
+    gap: 8px;
+}
+
+.blog-page-list-design .blog-post-author ul.tags .tag a{
+    color: #545454;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    text-transform: capitalize;
+}
+
+.blog-post-tab .tag-design li.tag-list a{
+    transition: all 0.4s ease-in-out;
+}
+
+.blog-post-tab .tag-design li.tag-list a:hover {
+    background: #2c4ecf;
+    color: #fff;
+    border-color: #2c4ecf;
+    transition: all 0.4s ease-in-out;
+}
+
+.footer-blog-section .content a:hover {
+    background: #2c4ecf;
+    border: 1px solid #2c4ecf;
+    color: #fff;
+    transition: all 0.4s ease-in-out;
+}
+
+@media screen and (min-width: 1920px){
+    .blog-page-list-design{
+        max-width: 1440px;
+    }
+    
+    .blog-post-tab{
+        max-width: 1440px;
+    }
+}
+
+@media (max-width: 1261px) {
+.blog-page-list-design {
+    padding: 0 1.5rem;
+}
+.blog-post-tab {
+    padding: 3rem 1.5rem 0;
+}
+.footer-blog-section {
+    padding: 3rem 1.5rem 0;
+}
+.custom-blog-form-section .custom-blog-design {
+    padding: 4rem 1.5rem 4rem;
+}
+}
+
+@media (max-width: 1024px) {
+.blog-page-list-design {
+    grid-template-columns: repeat(2,1fr);
+}
+.blog-post-tab .tag-design {
+    margin: 5px 0px;
+}
+.blog-post-tab .tag-design .tag-list a {
+    padding: 5px 15px;
+    margin: 5px 2px;
+}
+}
+
+@media (max-width: 990px) {
+.footer-blog-section .img {
+    max-width: 100%;
+    order: 1;
+    text-align: center;
+}
+.footer-blog-section .content {
+    max-width: 100%;
+    order: 0;
+    text-align: center;
+}
+.footer-blog-section .content a {
+    max-width: 500px;
+    margin: 30px auto 0px
+}
+}
+
+@media (min-width: 768px) {
+.blog-top-header .mobile {
+    display: none;
+}
+}
+
+@media (max-width: 767px) {
+.blog-top-header .desktop {
+    display: none;
+}
+.blog-page-list-design {
+    grid-template-columns: repeat(1,1fr);
+}
+}
+
+@media (max-width: 525px) {
+.footer-blog-section .img {
+    text-align: left;
+}
+.footer-blog-section .content {
+    max-width: 100%;
+    order: 0;
+    text-align: left;
+}
+.footer-blog-section .content a {
+    max-width: 500px;
+    margin: 30px 0 0px
+}
+}
+
+</style>
+
+<script>
+function formatDate(inputDate) {
+    const inputDateStr = inputDate;
+
+    // Parse the input date string
+    const date = new Date(inputDateStr);
+
+    // Format the date as "MM/DD/YYYY"
+    const formattedDate = `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`;
+
+    console.log(formattedDate);
+    
+    return formattedDate;
+}
+</script>
+
+<script>
+var Apikey = $('#apikey').val();
+
+// Function to retrieve and insert new data
+function getAndInsertNewData() {
+    fetch('/graphql', {
+                        method: 'POST',
+                        mode: 'cors',
+                        headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': 'Bearer ' + Apikey,
+                 },
+                        body: JSON.stringify({
+                                query: `query blogsearch {
+                                                            site {
+                                                                    content {
+                                                                                blog {
+                                                                name
+                                                                id
+                                                                path
+                                                                posts(first: 50) {
+                                                                                    edges {
+                                                                                            node {
+                                                                                                    name
+                                                                                                    path
+                                                                                                    tags
+                                                                                                    id
+                                                                                                    plainTextSummary
+                                                                                                    thumbnailImage {
+                                                                                                                    url(width: 10)
+                                                                                                                   }
+                                                                                                    publishedDate { 
+                                                                                                                    utc 
+                                                                                                    }
+                                                                                                    author
+                                                                                                 }
+                                                                                         }
+                                                                                 }
+                                                             }
+                                                                            }   
+                                                                 }
+                                                         }`,
+                            }),
+                      })
+    .then(res => res.json())
+    .then(res => {
+                    console.log(res);
+                    console.log(res);
+                    // Store the data in localStorage
+                    localStorage.setItem('searchblogData', JSON.stringify(res.data.site.content.blog.posts.edges));
+                  })
+    .catch(function (error) {
+                                console.error('Fetch error: ' + error);
+                            });
+}
+
+getAndInsertNewData();
+
+</script>
+
+<script>
+function bloggetpost(){
+    let dataArray = localStorage.getItem('searchblogData');
+    let html_box = []
+    let prints = JSON.parse(dataArray);
+    prints.map((item)=>{  
+                        let image = item.node.thumbnailImage.url;
+                        if (image.includes('10w')) {
+                                        image = image.replace('10w', '610w');
+                                    }
+                        let author = item.node.author;
+                        let dateandpost = formatDate(item.node.publishedDate.utc);
+                        let inhtml = `<article class="blog">
+                                        <div class="blog-post-figure">
+                                            <figure class="blog-thumbnail">
+                                                <a href="${item.node.path}">
+                                                    <img class="lazyautosizes lazyloaded" data-sizes="auto" src="${image}" data-src="${image}" alt="${item.node.name}" title="${item.node.name}">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="blog-post-body">
+                                            <header class="blog-header">
+                                                <h2 class="blog-title">
+                                                    <a href="${item.node.path}">${item.node.name}</a>
+                                                </h2>
+                                                <p class="blog-date-author-box">
+                                                    <span class="blog-date-published">${dateandpost}</span>|<span class="blog-post-author">${author}</span>  
+                                                </p>
+                                            </header>
+                                            <div class="blog-post">
+                                                <p>${plainTextSummary} …</p>
+                                                <a href="${item.node.path}">Read the post 
+                                                    <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M6 12H18M18 12L13 7M18 12L13 17" stroke="#00f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </article>`;
+                        html_box.push(inhtml);
+                        })
+    let result = html_box.join("");
+    document.querySelector('.blog-page-list-design.paginatorbloglist').innerHTML = result
+    }
+</script>
+
+<script>
+setTimeout(()=>{
+    if(location.pathname.includes('blog')){
+        bloggetpost()
+    }
+},2000)
+</script>
+
+<script>
+    function paginateItems(itemCount) {
+        const itemsPerPage = 12;
+        const itemList = document.querySelector('.blog-page-list-design.paginatorbloglist');
+        const prevButton = document.getElementById('prev-button-js');
+        const nextButton = document.getElementById('next-button-js');
+        const pageNumberContainer = document.getElementById('page-numbers');
+        const items = Array.from(itemList.children);
+        let currentPage = 1;
+        let pageCount; // Declare pageCount variable
+        
+        function showPage(page) {
+            const start = (page - 1) * itemsPerPage;
+            const end = start + itemsPerPage;
+
+            items.forEach((item, index) => {
+                if (index >= start && index < end) {
+                    item.style.display = "block";
+                    item.setAttribute("paginateelement", "paginateactive");
+                } else {
+                    item.style.display = "none";
+                    item.removeAttribute("paginateelement");
+                }
+            });
+        }
+        
+        function updatePageNumbers() {
+            pageCount = Math.ceil(itemCount / itemsPerPage); // Initialize pageCount
+
+            let pageNumbers = "";
+
+            if (pageCount > 1) {
+                pageNumbers += `<span class="page-number" data-page="1">1</span>`;
+
+                if (currentPage > 3) {
+                    pageNumbers += '<span class="ellipsis">...</span>';
+                }
+
+                for (let i = currentPage - 2; i <= currentPage + 2; i++) {
+                    if (i > 1 && i < pageCount) {
+                        pageNumbers += `<span class="page-number" data-page="${i}">${i}</span>`;
+                    }
+                }
+
+                if (currentPage < pageCount - 2) {
+                    pageNumbers += '<span class="ellipsis">...</span>';
+                }
+
+                if (pageCount > 1) {
+                    pageNumbers += `<span class="page-number" data-page="${pageCount}">${pageCount}</span>`;
+                }
+            }
+
+            pageNumberContainer.innerHTML = pageNumbers;
+            
+            let pagecounttext = document.getElementById("paginate-list");
+            
+            let currentpageitem = 1;
+            // itemsPerPage
+            let abv = currentPage-1;
+            let prevpagelinkitem = 1 + itemsPerPage * abv;
+            
+            let bnm = document.querySelectorAll('[paginateelement="paginateactive"]');
+            
+            
+            let rew = abv * itemsPerPage;
+            let poi = rew + bnm.length;
+            
+            let sdf = document.querySelector(".blog-top-header");
+            
+            
+            
+            pagecounttext.innerHTML = `${prevpagelinkitem} - ${poi} of ${itemCount} articles`;
+
+            const pageNumberElements = document.querySelectorAll(".page-number");
+
+            pageNumberElements.forEach((pageNumberElement) => {
+                pageNumberElement.addEventListener("click", () => {
+                    document.querySelectorAll("#page-numbers span").forEach((classes) => {
+                        classes.classList.remove("active");
+                    });
+
+                    currentPage = parseInt(pageNumberElement.getAttribute("data-page"));
+                    showPage(currentPage);
+                    updatePaginationButtons();
+                    pageNumberElement.classList.add("active");
+                    console.log(currentPage);
+                    updatePageNumbers();
+                    sdf.scrollIntoView({ behavior: "smooth" });
+                });
+            });
+        }
+        
+        function updatePaginationButtons() {
+            if (currentPage === 1) {
+                prevButton.disabled = true;
+            } else {
+                prevButton.disabled = false;
+            }
+
+            if (currentPage === pageCount) {
+                nextButton.disabled = true;
+            } else {
+                nextButton.disabled = false;
+            }
+            document.querySelectorAll("#page-numbers span").forEach((classes) => {
+                classes.classList.remove("active");
+            });
+            setTimeout(() => {document.querySelector('.page-number[data-page="' + currentPage + '"]').classList.add("active");}, 500);
+        }
+        
+        prevButton.addEventListener("click", () => {
+            if (currentPage > 1) {
+                currentPage--;
+                showPage(currentPage);
+                updatePaginationButtons();
+                updatePageNumbers();
+                
+            }
+        });
+
+        nextButton.addEventListener("click", () => {
+            if (currentPage < pageCount) {
+                currentPage++;
+                showPage(currentPage);
+                updatePaginationButtons();
+                updatePageNumbers();
+        
+            }
+        });
+        
+        showPage(currentPage);
+        updatePaginationButtons();
+        updatePageNumbers();
+    }
+    
+    setTimeout(() => {
+                        const counts = document.querySelectorAll(".blog-page-list-design.paginatorbloglist article").length;
+                        paginateItems(counts);
+                     }, 1000);
+  
+    setTimeout(() => {
+                        const counts = document.querySelectorAll(".blog-page-list-design.paginatorbloglist article").length;
+                        paginateItems(counts);
+                     }, 1000);
+</script>
+
+{{/partial}}
+{{> layout/base}}

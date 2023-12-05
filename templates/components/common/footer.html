@@ -1,0 +1,282 @@
+{{#if banners.bottom}}
+    {{#if settings.data_tag_enabled}}
+        <div class="banners" data-banner-location="bottom">
+            {{#each (limit banners.bottom_metadata 1)}}
+                <div class="banner" data-event-type="promotion" data-entity-id="{{this.id}}" data-name="{{this.banner-name}}" data-position="{{this.location}}" data-name="{{this.banner-name}}">
+                    <div data-event-type="promotion-click">
+                        {{{this.content}}}
+                    </div>
+                </div>
+            {{/each}}
+        </div>
+    {{else}}
+        <div class="banners" data-banner-location="bottom">
+            <div class="banner">
+                {{{limit banners.bottom 1}}}
+            </div>
+        </div>
+    {{/if}}
+
+{{/if}}
+
+
+
+{{#unless page.title '===' "Partner"}}
+    {{#unless page.title '===' "Sign up Thank You copy"}}
+    
+<div class="newsletter-home custom-form-background" >
+   
+      <center><h2><span style="color: #ffffff;">Enter Your Email for an <i>Instant Coupon</i> and Design Guide for Your Project</center></span></h2>
+        <div class="nh-form">
+            
+<!-- Start Coupon Code form -->
+
+<div>
+    <div style="margin-left:10%"; "margin-right: 5%">
+        
+
+<table style="width: 90%;" border="0" align="center">
+<tbody>
+<tr>
+<td>&nbsp;</td>
+<td>
+<script charset="utf-8" type="text/javascript" src="https://js.hsforms.net/forms/shell.js"></script>
+<script type="text/javascript">// <![CDATA[
+  hbspt.forms.create({
+	portalId: "4711502",
+	formId: "f4643b45-e7bd-4cf8-a6c0-89700477d2b5", 
+	onFormReady: function(form) {
+		var script = document.createElement('script');
+		script.type = 'text/javascript';
+		script.src = "https://182092.t.hyros.com/v1/lst/universal-script?ph=f5ef76e6ec8b1a3539ed476f1587b6f368ef605d5b57efaa9ba21eaa41161277&tag=!hubspotmarketingform";
+		form[0].appendChild(script);
+	}
+});
+// ]]></script>
+
+
+</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+   
+<!-- End Coupon Code form -->   
+   
+  {{/unless}} 
+{{/unless}}
+    
+<footer class="footer" role="contentinfo">
+    <div class="container">
+        {{#if theme_settings.social_icon_placement_bottom '!==' 'bottom_none'}}
+            <article class="footer-info-col
+                footer-info-col--social
+                footer-info-col--{{#if theme_settings.social_icon_placement_bottom '===' 'bottom_left'}}left{{else}}right{{/if}}"
+                data-section-type="footer-webPages">
+                    <h5 class="footer-info-heading">{{lang 'social.connect'}}</h5>
+                    {{> components/common/social-links}}
+            </article>
+        {{/if}}
+        <section class="footer-info">
+{{!--
+            <article class="footer-info-col footer-info-col--small" data-section-type="footer-webPages">
+                <h5 class="footer-info-heading">{{lang 'footer.navigate'}}</h5>
+                <ul class="footer-info-list">
+                    {{#each pages}}
+                        <li>
+                            <a href="{{url}}">{{name}}</a>
+                        </li>
+                    {{/each}}
+                    <li>
+                        <a href="{{urls.sitemap}}">{{lang 'sitemap.page_title'}}</a>
+                    </li>
+                </ul>
+            </article>
+--}}
+
+            <article class="footer-info-col footer-info-col--small" data-section-type="footer-quick-links">
+                <h5 class="footer-info-heading">Quick Links</h5>
+                    <ul class="footer-info-list">
+                        <li>
+                            <a href="/about/">About</a>
+                        </li>
+                        <li>
+                            <a href="/customer-gallery/">Project Gallery</a>
+                        </li>
+                        <li>
+                            <a href="/resource-downloads">Resources</a>
+                        </li>
+                        <li>
+                            <a href="/what-are-led-strip-lights/">What are LED strip lights?</a>
+                        </li>
+                        <li>
+                            <a href="/pages/FAQ.html">FAQ</a>
+                        </li>
+                        <li>
+                            <a href="/ask-us-a-question/">Ask Us Anything</a>
+                        </li>
+                    </ul>
+            </article>
+
+            <article class="footer-info-col footer-info-col--small" data-section-type="footer-categories">
+                <h5 class="footer-info-heading">{{lang 'footer.categories'}}</h5>
+                <ul class="footer-info-list">
+                    <li>
+                        <a href="/LED-Flexible-strips-ultra-bright-led-strip-lights">LED Strip Lights</a>
+                    </li>
+                    <li>
+                        <a href="/led-strip-light-kits/ultra-bright-led-lighting-kits">LED Strip Light Kits</a>
+                    </li>
+                    <li>
+                        <a href="/klus">Aluminum Mounting Extrusions</a>
+                    </li>
+                    <li>
+                        <a href="/led-power-supplies-12v-and-24v/">LED Power Supplies</a>
+                    </li>
+                    <li>
+                        <a href="/dimmers-amplifiers-and-rgb-controllers/">Dimmers, Amplifiers, and RGB Controllers</a>
+                    </li>
+                    <li>
+                        <a href="/browse-products/">View All</a>
+                    </li>
+                </ul>
+            </article>
+
+            <article class="footer-info-col footer-info-col--small" data-section-type="footer-customer-service">
+                <h5 class="footer-info-heading">Customer Service</h5>
+                <ul class="footer-info-list">
+                    <li>
+                        <a href="/login.php">Customer & Partner Sign In / Account</a>
+                    </li>
+                    <li>
+                        <a href="/warranties/">Longest LED Strip Warranty</a>
+                    </li>
+                    <li>
+                        <a href="/easy-shipping-procedures/">Shipping & Returns</a>
+                    </li>
+                    <li>
+                        <a href="/accessibility-policy/">ADA Accessibility Policy</a>
+                    </li>
+                    <li>
+                        <a href="/custom-oem-solutions/">OEM Partner Signup</a>
+                    </li>
+                     <li>
+                        <a href="/contractor-program/">Contractor Discount Program</a>
+                    </li>
+                </ul>
+            </article>
+
+            <article class="footer-info-col footer-info-col--small" data-section-type="footer-customer-reviews" >
+                <h5 class="footer-info-heading">Customer Reviews</h5>
+                <ul class="footer-info-list reviews-io">
+                    <li>
+                        <a href="/reviews-and-testimonials/">Flexfire LEDs Product Reviews</a>
+                    </li>
+                   <p></p>
+                        <div id="stamped-reviews-widget" data-widget-type="site-badge" data-height="80" data-title="Verified Reviews" style="max-width: 12rem;"></div>
+                   
+                </ul>
+            </article>
+
+            <article class="footer-info-col footer-info-col--small" data-section-type="footer-customer-reviews">
+                <h5 class="footer-info-heading">Contact Us</h5>
+                    <ul class="footer-info-list">
+                        <li>Toll Free Number: +1-844-353-9347</li>
+                        <li>Local Number: +1-925-273-9080</li>
+                        <li>Info: info@FlexfireLEDs.com</li>
+                        <p></p>
+                        <li>Flexfire LEDs, Inc</li>
+                        <li>3554 Business park drive, suite F</li>
+                        <li>Costa Mesa, CA 92626</li>
+                    </ul>
+            </article>
+
+
+{{!--
+            {{#and theme_settings.shop_by_brand_show_footer shop_by_brand.length}}
+            <article class="footer-info-col footer-info-col--small" data-section-type="footer-brands">
+                <h5 class="footer-info-heading">{{lang 'footer.brands'}}</h5>
+                <ul class="footer-info-list">
+                    {{#each shop_by_brand}}
+                        <li>
+                            <a href="{{url}}">{{name}}</a>
+                        </li>
+                    {{/each}}
+                    <li><a href="{{urls.brands}}">{{lang 'common.view_all'}}</a></li>
+                </ul>
+            </article>
+            {{/and}}
+
+            {{#if settings.address}}
+            <article class="footer-info-col footer-info-col--small" data-section-type="storeInfo">
+                <h5 class="footer-info-heading">{{lang 'footer.info'}}</h5>
+                <address>{{nl2br settings.address}}</address>
+                {{#if settings.phone_number}}
+                    <strong>{{lang 'footer.call_us' phone_number=settings.phone_number}}</strong>
+                {{/if}}
+            </article>
+            {{/if}}
+
+            <article class="footer-info-col" data-section-type="newsletterSubscription">
+                {{#if settings.show_newsletter_box}}
+                    {{> components/common/subscription-form}}
+                {{/if}}
+                {{> components/common/payment-icons}}
+            </article>
+--}}
+        <p class="seo-footer">All LED strip lights and LED flexible lighting kits are designed in California, USA. We service Los Angeles, San Diego, Orange County, San Francisco, Portland, Las Vegas, New York, and much more. We're friendly internationally to all LED lovers. We are activly looking for distributors in the USA, Australia, UK, Vancouver and Ontario, Canada. We have the brightest LED strip lights with the longest warranty on the market!</p>
+        </section>
+{{!--        
+        {{#if theme_settings.geotrust_ssl_common_name}}
+            <div class="footer-geotrust-ssl-seal">
+                {{> components/common/geotrust-ssl-seal}}
+            </div>
+        {{/if}}
+        {{#if theme_settings.show_powered_by}}
+            <div class="footer-copyright">
+                <p class="powered-by">Powered by <a href="https://www.bigcommerce.com?utm_source=merchant&amp;utm_medium=poweredbyBC" rel="nofollow">BigCommerce</a></p>
+            </div>
+        {{/if}}
+        {{#if theme_settings.show_copyright_footer}}
+            <div class="footer-copyright">
+                <p class="powered-by">&copy; {{moment format="YYYY"}} {{settings.store_name}} </p>
+            </div>
+        {{/if}}
+  --}}      
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            
+            <div class="footer-bottom-content">
+                <div class="footer-bottom-left">   
+                    
+                    <p class="powered-by">&copy; {{moment format="YYYY"}} {{settings.store_name}} . All Rights Reserved. <a href="/sitemap.php">| Sitemap</a><a href="/warranties/"> | Terms</a></p> 
+                   
+                </div>
+                <div class="footer-bottom-right">
+                               
+                    {{#if theme_settings.social_icon_placement_top}}
+                        <li class="navPages-item">
+                            {{> components/common/social-links}}
+                        </li>
+                    {{/if}}
+                </div>
+            </div>
+        </div>
+    </div>
+    
+        
+
+</footer>

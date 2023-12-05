@@ -1,0 +1,324 @@
+---
+products:
+    new:
+        limit: {{theme_settings.homepage_new_products_count}}
+    featured:
+        limit: {{theme_settings.homepage_featured_products_count}}
+    top_sellers:
+        limit: {{theme_settings.homepage_top_products_count}}
+carousel: {{theme_settings.homepage_show_carousel}}
+blog:
+    recent_posts:
+        limit: {{theme_settings.homepage_blog_posts_count}}
+---
+
+{{#partial "hero"}}
+    {{#if carousel}}
+    <div class="desktop-hero">
+        {{> components/carousel arrows=theme_settings.homepage_show_carousel_arrows}}
+    </div>
+    <div class="mobile-hero" style="background: #000 url('/product_images/uploaded_images/mobile-hero.jpg') no-repeat">
+        <div class="heroCarousel-content">
+            <h1 class="heroCarousel-title">Use Our Quick Product Finder</h1>
+            <p class="custom-text">Find the perfect light for your project in seconds!<br>
+           </p>
+            <p class="heroCarousel-description">{{{text}}}</p>
+                <a href="/product-wizard-led-light-product-selector/" class="heroCarousel-action button button--primary button--large">Try Our Product Finder Now</a>
+        </div>{{#partial "hero"}}
+    {{#if carousel}}
+    <div class="desktop-hero">
+        {{> components/carousel arrows=theme_settings.homepage_show_carousel_arrows}}
+    </div>
+    <a href="/product-wizard-led-light-product-selector/">
+    </a>
+    {{/if}}
+{{/partial}}
+    </div>   
+    {{/if}}
+{{/partial}}
+
+
+{{#partial "page-full"}}
+
+    {{#each shipping_messages}}
+        {{> components/common/alert-info message}}
+    {{/each}}
+
+<div class="main full">
+{{!--
+    {{#if products.featured}}
+        {{> components/products/featured products=products.featured columns=theme_settings.homepage_featured_products_column_count}}
+    {{/if}}
+
+    {{#if products.top_sellers}}
+        {{> components/products/top products=products.top_sellers columns=theme_settings.homepage_top_products_column_count}}
+    {{/if}}
+
+    {{#if products.new}}
+        {{> components/products/new products=products.new columns=theme_settings.homepage_new_products_column_count}}
+    {{/if}}
+--}}
+
+    
+    <div class="container">    
+        <div class="home-top">
+            <h1>Highest Quality Linear LED Lighting</h1>
+            <div class="grid">
+                <div class="row">
+                   
+                    <div class="col S12 M6 L3">
+                        <a href="/categories/LED-Flexible-strips/High-Intensity-UltraBright-LED-Strips/">
+                        <div class="home-top-holder">
+                            <div class="img-holder">
+                                <img class="lazyload" src="{{cdn 'img/loading.svg'}}" data-src="/product_images/uploaded_images/white-led-strip-lights.jpeg" alt="Brightest LED strip Lights" title="Brightest LED strip Lights">
+                            </div>
+                            <h3>Static White Output <br>LED Strip Lights</h3>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="col S12 M6 L3">
+                        <a href="/rgb-color-changing-strip-light/">
+                        <div class="home-top-holder">
+                            <div class="img-holder">
+                                <img class="lazyload" src="{{cdn 'img/loading.svg'}}" data-src="/product_images/uploaded_images/color-changing-lights-01.jpg" alt="Color Changing RGB LED strip Lights" title="Color Changing RGB LED strip Lights">
+                            </div>
+                            <h3>RGB & RGBW Color <br>Changing Lights</h3>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="col S12 M6 L3">
+                        <a href="/dynamic-tunable-white-led-strip-lights/">
+                        <div class="home-top-holder">
+                            <div class="img-holder">
+                                <img class="lazyload" src="{{cdn 'img/loading.svg'}}" data-src="/product_images/uploaded_images/tunable-dynamic-white-output-led-strip-light.gif" alt="Dynamic Tunable White Strip Lighting" title="Dynamic Tunable White Strip Lighting">
+                            </div>
+                            <h3>Dynamic Tunable<br> White Lights</h3>
+                        </div>
+                        </a>
+                    </div>
+                     <div class="col S12 M6 L3">
+                        <a href="/categories/LED-Flexible-strips/single-color-output-led-strip-lights/">
+                        <div class="home-top-holder">
+                            <div class="img-holder">
+                               <img class="lazyload" src="{{cdn 'img/loading.svg'}}" data-src="/product_images/uploaded_images/colorbright-vivid-color-led-strip-lights.jpg" alt="LED Strip Accent Lighting" title="LED Strip Accent Lighting"> 
+                            </div>
+                            <h3>Single Color LED Strip Lights <br> (Red, Amber, Blue, or Green)</h3>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="product-category"
+    data-slick='{
+        "dots": false,
+        "arrows": false,
+        "infinite": false,
+        "mobileFirst": true,
+        "slidesToShow": 1.5,
+        "slidesToScroll": 1.5,
+        "responsive": [
+            {
+                "breakpoint": 1260,
+                "settings": {
+                    "slidesToScroll": 6,
+                    "slidesToShow": 6
+                }
+            },
+            {
+                "breakpoint": 800,
+                "settings": {
+                    "slidesToScroll": 3.5,
+                    "slidesToShow": 3.5
+                }
+            },
+            {
+                "breakpoint": 550,
+                "settings": {
+                    "slidesToScroll": 2.5,
+                    "slidesToShow": 2.5
+                }
+            }
+        ]
+    }'
+>
+            
+               <div class="product-ca-holder">
+                   <a href="/LED-Flexible-strips-ultra-bright-led-strip-lights">
+                   <img class="lazyload" src="{{cdn 'img/loading.svg'}}" data-src="/product_images/uploaded_images/product-01.jpg" alt="Brightest LED strip lights" title="Brightest LED strip lights">
+                   <p>LED Strip Lights</p>
+                   </a>
+               </div> 
+               <div class="product-ca-holder">
+                   <a href="/dimmers-amplifiers-and-rgb-controllers/">
+                   <img class="lazyload" src="{{cdn 'img/loading.svg'}}" data-src="/product_images/uploaded_images/product-02.jpg" alt="LED strip light controllers and amplifiers" title="LED strip light controllers and amplifiers">
+                   <p>Controllers & Dimmers</p>
+                   </a>
+               </div>
+               <div class="product-ca-holder">
+                   <a href="/led-power-supplies-12v-and-24v/">
+                   <img class="lazyload" src="{{cdn 'img/loading.svg'}}" data-src="/product_images/uploaded_images/product-03.jpg" alt="LED power supplies and drivers" title="LED power supplies and drivers">
+                   <p>Power Supplies</p>
+                   </a>
+               </div>
+               <div class="product-ca-holder">
+                   <a href="/wire-and-strip-connectors-and-accessories/">
+                   <img class="lazyload" src="{{cdn 'img/loading.svg'}}" data-src="/product_images/uploaded_images/product-04.jpg" alt="LED strip light connectors" title="LED strip light connectors">
+                   <p>Connectors</p>
+                   </a>
+               </div>
+               <div class="product-ca-holder">
+                   <a href="/lighting-control-sensors/">
+                   <img class="lazyload" src="{{cdn 'img/loading.svg'}}" data-src="/product_images/uploaded_images/product-05.jpg" alt="LED strip controls and sensors" title="LED strip controls and sensors">
+                   <p>Control Sensors</p>
+                   </a>
+               </div>
+               <div class="product-ca-holder">
+                   <a href="/led-strip-light-kits/ultra-bright-led-lighting-kits">
+                   <img class="lazyload" src="{{cdn 'img/loading.svg'}}" data-src="/product_images/uploaded_images/product-06.jpg" alt="UltraBright LED strip lighting kits" title="UltraBright LED strip lighting kits">
+                   <p>Strip Lighting Kits</p>
+                   </a>
+               </div>
+        </div>
+        
+        <div class="home-ctas">
+            <div class="grid">
+                <div class="row">
+                    
+    <div class="brands">
+  <div class="brands-holder">
+            <h2>A Few Bright Customers Who Trust Flexfire LEDs</h2>
+            <div class="top-brands">
+                <div><img class="lazyload" src="{{cdn 'img/loading.svg'}}" data-src="/product_images/uploaded_images/applebrand.png" alt="Apple" title="Apple"></div>
+                <div><img class="lazyload" src="{{cdn 'img/loading.svg'}}" data-src="/product_images/uploaded_images/bellagio.png" alt="Bellagio Hotel" title="Bellagio Hotel"></div>
+                <div><img class="lazyload" src="{{cdn 'img/loading.svg'}}" data-src="/product_images/uploaded_images/disney.png" alt="Disney Studios" title="Disney Studios"></div>
+                <div><img class="lazyload" src="{{cdn 'img/loading.svg'}}" data-src="/product_images/uploaded_images/embassy.png" alt="Embassy Suites" title="Embassy Suites"></div>
+                <div><img class="lazyload" src="{{cdn 'img/loading.svg'}}" data-src="/product_images/uploaded_images/google.png" alt="Google" title="Google"></div>
+                <div><img class="lazyload" src="{{cdn 'img/loading.svg'}}" data-src="/product_images/uploaded_images/kohler.png" alt="Kohler" title="Kohler"></div>
+                <div><img class="lazyload" src="{{cdn 'img/loading.svg'}}" data-src="/product_images/uploaded_images/marriot.png"alt="Mariott Hotels" title="Mariott Hotels"></div>
+                <div><img class="lazyload logo-bottom" src="{{cdn 'img/loading.svg'}}" data-src="/product_images/uploaded_images/ford.png"alt="Ford Motor Company" title="Ford Motor Company"></div>
+                <div><img class="lazyload logo-bottom" src="{{cdn 'img/loading.svg'}}" data-src="/product_images/uploaded_images/lockheadmartin.png" alt="Lockheed Martin" title="Lockheed Martin"></div>
+                <div><img class="lazyload logo-bottom" src="{{cdn 'img/loading.svg'}}" data-src="/product_images/uploaded_images/royalcarribian.png" alt="Royal Caribbean" title="Royal Caribbean"></div>
+                <div><img class="lazyload logo-bottom" src="{{cdn 'img/loading.svg'}}" data-src="/product_images/uploaded_images/miot.png" alt="MIT" title="MIT"></div>
+                <div><img class="lazyload logo-bottom" src="{{cdn 'img/loading.svg'}}" data-src="/product_images/uploaded_images/smithsonian.png" alt="Smithsonian Museum Lighting" title="Smithsonian Museum Lighting"></div>
+               
+            </div>
+        </div>
+    </div>
+{{!--
+                    <div class="col S12 M6 L6">
+                        <a href="/products/dimmers-amplifiers-and-rgb-controllers/">
+                        <div class="home-cta home-cta-01" style="background-image: url('/product_images/uploaded_images/home-cta-01.jpg')">
+                            <div class="home-cta-text">
+                                <h2>Control Your Lights</h2>
+                                <p>Complete control of your lights with a selection<br> of remotes and dimmers.</p>
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="col S12 M6 L6">
+                        <a href="/products/led-power-supplies/">
+                        <div class="home-cta home-cta-02" style="background-image: url('/product_images/uploaded_images/home-cta-03.jpg')">
+                            <div class="home-cta-text">
+                                <h2>Power Your Lights</h2>
+                                <p>Complete selection of dimmable and non<br> dimmable power supplies.</p>
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+--}}                    
+                    <div class="col S12 M6 L6">
+                        <a href="/custom-oem-solutions/">
+                        <div class="home-cta home-cta-03" style="background-image: url('/product_images/uploaded_images/home-cta-22.jpg')">
+                            <div class="home-cta-text">
+                                <h2>OEM Partner Program</h2>
+                                <p>Custom Designed Solutions<br>
+                                    Consulting and Prototyping<br>
+                                    Contract Manufacturing and More!
+                                </p>
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="col S12 M6 L6">
+                        <a href="/contractor-program/">
+                        <div class="home-cta home-cta-04" style="background-image: url('/product_images/uploaded_images/home-cta-04.jpg')">
+                            <div class="home-cta-text">
+                                <h2>Reseller Partner Program</h2>
+                                <p>Special Partner Pricing<br>
+                                    Quote & Bid Assistance<br>
+                                    Turnkey Project Design and More!</p>
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="home-bottom-cta">
+            <div class="row">
+                <div class="col S12 L4">
+                    <div class="home-bottom-content">
+                        <i class="fas fa-swatchbook"></i>
+                        <h3>Free Expert Advice & Design</h3>
+                        <p>Let our LED lighting experts consult you on anything you need, including designing your entire project in one, stress-free, turn-key solution - at no cost to you.</p>
+                        <a href="/ask-us-a-question/">Read More</a>
+                    </div>
+                </div>
+                <div class="col S12 L4">
+                    <div class="home-bottom-content">
+                        <i class="fas fa-hand-holding-usd"></i>
+                        <h3>30-Day Money Back Guarantee</h3>
+                        <p>We are giving you 30 days to try our lights. If the color temperature, brightness, or size does not work for your project, you can return them back to us! </p>
+                        <a href="/returns-and-exchanges/">Read More</a>
+                    </div>
+                </div>
+                <div class="col S12 L4">
+                    <div class="home-bottom-content" style="border:none;">
+                        <i class="fas fa-award"></i>
+                        <h3>Competitive 15-Year Warranty</h3>
+                        <p>Our products are built to last, and we guarantee their quality, backed with a 15-Year Warranty on most of our LED Strips.</p>
+                        <a href="/warranties/">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+<div id="stamped-reviews-widget" data-widget-type="carousel" data-auto-play="true" data-auto-play-speed="8"></div>
+        <div class="home-article-cta">
+            <div class="row">
+                <div class="col S12 XL6">
+                    <div class="home-article-cta-content">
+                        <h2>Ask Us.</h2>
+                        <h2>We're Here to Help</h2>
+                        <h3>Get Advice from Our Project Developers about
+                         Measurements, Product Selection, Perfect Compatibility, or Anything!</h3>
+                        <a class="home-c-button-secondary" href="/ask-us-a-question/"> Chat With Us</a></div>
+                    </div>
+                <div class="col S12 XL6">
+                    <div class="home-article-img-holder">
+                        <a href="/ask-us-a-question/">
+                        <img class="lazyload" data-src="https://www.flexfireleds.com/content/articles/Week-1-Kitchen/team.jpg" alt="Flexfire LEDs Project Development Team best customer service LED strip lights">
+                    </div>
+                </div>
+                </div>
+        </div>
+        
+    </div>
+</div>
+
+
+ 
+{{/partial}}
+
+{{> layout/base}}
+
+
+
+<style>
+.body {
+    margin-top: 0;
+}
+
+</style>

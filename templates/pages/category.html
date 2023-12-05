@@ -1,0 +1,147 @@
+---
+category:
+shop_by_price: true
+products:
+limit: {{theme_settings.categorypage_products_per_page}}
+---
+{{inject "categoryProductsPerPage" theme_settings.categorypage_products_per_page}}
+{{#partial "head"}}
+{{#if pagination.category.previous}}
+<link rel="prev" href="{{pagination.category.previous}}">
+{{/if}}
+{{#if pagination.category.next}}
+<link rel="next" href="{{pagination.category.next}}">
+{{/if}}
+{{/partial}}
+
+{{#partial "page"}}
+
+{{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+{{#if category.image}}
+<img class="lazyload" data-sizes="auto" src="{{cdn 'img/loading.svg'}}"
+    data-src="{{getImage category.image 'zoom_size'}}">
+{{/if}}
+{{#unless theme_settings.hide_category_page_heading }}
+<h1 class="page-heading">{{category.name}}</h1>
+{{/unless}}
+
+<div class="page">
+    {{!--
+    {{#if category.faceted_search_enabled}}
+        <aside class="page-sidebar" id="faceted-search-container">
+            {{> components/category/sidebar}}
+            
+        </aside>
+    {{else if category.subcategories}}
+        <aside class="page-sidebar" id="faceted-search-container">
+            {{> components/category/sidebar}}
+        </aside>
+        
+    {{else if category.shop_by_price}}
+        {{#if theme_settings.shop_by_price_visibility}}
+             <aside class="page-sidebar" id="faceted-search-container">
+                {{> components/category/sidebar}}
+            </aside>
+        {{/if}}
+    {{/if}}
+    --}}
+
+    <div class="pagesLeft">
+        <nav>
+            <div class="sidebarBlock">
+                <h5 class="sidebarBlock-heading">Categories</h5>
+                <ul class="navList">
+                    {{#each categories}}
+                    <li class="navList-item">
+                        {{#if children}}
+                        {{!--     
+                            <a href="{{url}}" class="navList-action has-toggle">{{name}}</a>
+                            <a href="javascript:void(0)" class="nav-toggle normal" onclick="toggleClass('.navPages-{{id}}', 'show'); toggle(this);"><span class="plus">+</span></a>
+                            --}}
+                        <ul class="navPage-childList navPages-{{id}}">
+                            {{#each children}}
+                            <li class="navPage-childList-item">
+                                {{#if children}}
+                                <a class="navPage-childList-action navPages-action has-toggle"
+                                    href="{{url}}">{{name}}</a>
+                                <a href="javascript:void(0)" class="nav-toggle normal"
+                                    onclick="toggleClass('.navPages-{{id}}', 'show'); toggle(this);"><span
+                                        class="plus">+</span></a>
+                                <ul class="navPage-grandchildList collapse navPages-{{id}}">
+                                    {{#each children}}
+                                    <li class="navPage-grandchildListList-item">
+                                        {{#if children}}
+                                        <a class="navPage-grandchildListList-action navPages-action has-toggle"
+                                            href="{{url}}">{{name}}</a>
+                                        <a href="javascript:void(0)" class="nav-toggle normal"
+                                            onclick="toggleClass('.navPages-{{id}}', 'show'); toggle(this);"><span
+                                                class="plus">+</span></a>
+                                        <ul class="navPage-greatgrandchildList collapse navPages-{{id}}">
+                                            {{#each children}}
+                                            <li class="navPage-greatgrandchildListList-item">
+                                                <a class="navPage-greatgrandchildListList-action navPages-action"
+                                                    href="{{url}}">{{name}}</a>
+                                            </li>
+                                            {{/each}}
+                                        </ul>
+                                        {{else}}
+                                        <a class="navPage-grandchildListList-action navPages-action"
+                                            href="{{url}}">{{name}}</a>
+                                        {{/if}}
+                                    </li>
+                                    {{/each}}
+                                </ul>
+                                {{else}}
+                                <a class="navPage-childList-action navPages-action" href="{{url}}">{{name}}</a>
+                                {{/if}}
+                            </li>
+                            {{/each}}
+                        </ul>
+                        {{else}}
+                        <a href="{{url}}" class="navList-action">{{name}}</a>
+                        {{/if}}
+                    </li>
+                    {{/each}}
+                </ul>
+                
+                {{#if category.faceted_search_enabled}}
+                    {{> components/category/sidebar}}
+                {{/if}} 
+                
+            </div>
+        </nav>
+
+
+
+        <div class=" left-banner">
+            <h2>Ask Us.</h2>
+            <ul style="list-style: none;">
+                <li>Project Design Services</li>
+                <li>Samples and Quotes</li>
+                <li>Project Assistance</li>
+                <li>Friendly help Guaranteed!</li>
+            </ul>
+            <p>Free Advice From Our Experts</p>
+            <div class="c-button-holder"><a href="/ask-us-a-question/" class="c-button-primary"> Chat | Call | Email </a> </div>
+            <div class="sideimg-holder"> </div>
+
+        </div>
+    </div>
+    <div class="pagesRight">
+        <main class="page-content" id="product-listing-container">
+            {{{category.description}}}
+            <div class="categoryProducts">
+                {{#if category.products}}
+                {{> components/category/product-listing}}
+                {{else}}
+                <!---!<p>{{lang 'categories.no_products'}}</p>!---!>
+                {{/if}}
+            </div>
+        </main>
+    </div>
+
+
+</div>
+
+{{/partial}}
+{{> layout/base}}

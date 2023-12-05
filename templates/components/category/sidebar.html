@@ -1,0 +1,78 @@
+
+{{> components/faceted-search/index category}}
+
+{{!--
+<nav>
+    {{#if category.subcategories}}
+    <div class="sidebarBlock">
+            <h5 class="sidebarBlock-heading">Categories</h5>
+            <ul class="navList">
+                {{#each categories}}
+                <li class="navList-item">
+                    {{#if children}}
+  
+                    <a href="{{url}}" class="navList-action has-toggle">{{name}}</a>
+                    <a href="javascript:void(0)" class="nav-toggle normal" onclick="toggleClass('.navPages-{{id}}', 'show'); toggle(this);"><span class="plus">+</span></a>
+     
+                    <ul class="navPage-childList navPages-{{id}}">
+                        {{#each children}}
+                        <li class="navPage-childList-item">
+                            {{#if children}}
+                            <a class="navPage-childList-action navPages-action has-toggle" href="{{url}}">{{name}}</a>
+                            <a href="javascript:void(0)" class="nav-toggle normal" onclick="toggleClass('.navPages-{{id}}', 'show'); toggle(this);"><span class="plus">+</span></a>
+                            <ul class="navPage-grandchildList collapse navPages-{{id}}">
+                                {{#each children}}
+                                    <li class="navPage-grandchildListList-item">
+                                        {{#if children}}
+                                        <a class="navPage-grandchildListList-action navPages-action has-toggle" href="{{url}}">{{name}}</a>
+                                        <a href="javascript:void(0)" class="nav-toggle normal" onclick="toggleClass('.navPages-{{id}}', 'show'); toggle(this);"><span class="plus">+</span></a>
+                                        <ul class="navPage-greatgrandchildList collapse navPages-{{id}}">
+                                            {{#each children}}
+                                            <li class="navPage-greatgrandchildListList-item">
+                                                <a class="navPage-greatgrandchildListList-action navPages-action" href="{{url}}">{{name}}</a>
+                                            </li>
+                                            {{/each}}
+                                        </ul>
+                                        {{else}}
+                                        <a class="navPage-grandchildListList-action navPages-action" href="{{url}}">{{name}}</a>
+                                        {{/if}}
+                                    </li>
+                                {{/each}}
+                            </ul>
+                            {{else}}
+                            <a class="navPage-childList-action navPages-action" href="{{url}}">{{name}}</a>
+                            {{/if}}
+                        </li>
+                        {{/each}}
+                    </ul>
+                    {{else}}
+                    <a href="{{url}}" class="navList-action">{{name}}</a>
+                    {{/if}}
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+    {{/if}}
+
+    {{#if category.faceted_search_enabled}}
+        {{> components/faceted-search/index category}}
+    {{else}}
+        {{> components/category/shop-by-price shop_by_price=category.shop_by_price category_url=category.url}}
+    {{/if}}
+
+</nav>
+
+<div class=" left-banner">
+        <h1>Get Free Advice</h1>
+        <h3>Talk to <span>Lighting</span> Experts </h3>
+        <ul style="list-style: none;">
+            <li>Project Design Services</li>
+            <li>Product Selection Help</li>
+            <li>and More!</li>
+        </ul>
+        
+        <div class="c-button-holder"><a href="/ask-us-a-question/" class="c-button-primary"> Start Now </a> </div>
+        <div class="sideimg-holder"> </div>
+        
+</div>
+--}}

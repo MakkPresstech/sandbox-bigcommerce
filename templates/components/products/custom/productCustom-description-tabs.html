@@ -1,0 +1,647 @@
+<ul class="tabs sticky-tabs" data-tab>
+	{{#each  ( split product.description "<p>---</p>" ) }}
+		{{#contains this "Description Tab"}}
+		<li class="tab is-active">
+			<a class="tab-title" href="#tab-description">
+				<i>
+					<svg>
+						<use xlink:href="#icon-info"></use>
+					</svg>
+				</i>
+				About
+			</a>
+		</li>
+		{{/contains}}
+
+		{{#contains this "Specifications Tab"}}
+		<li class="tab">
+			<a class="tab-title" href="#tab-specifications">
+				<i>
+					<svg>
+						<use xlink:href="#icon-spec"></use>
+					</svg>
+				</i>
+					Specifications
+				</a>
+		</li>
+		{{/contains}}
+
+		{{#contains this "Download Tab"}}
+		<li class="tab">
+			<a class="tab-title" href="#tab-download">
+				<i>
+					<svg>
+						<use xlink:href="#icon-downloads"></use>
+					</svg>
+				</i>
+				Download
+			</a>
+		</li>
+		{{/contains}}
+	{{/each}}
+	<li class="tab">
+		<a class="tab-title" href="#tab-reviews">
+			<i>
+				<svg>
+					<use xlink:href="#icon-star-full"></use>
+				</svg>
+			</i>
+			Reviews
+		</a>
+	</li>
+	{{#each  ( split product.description "<p>---</p>" ) }}
+		{{#contains this "FAQ Tab"}}
+		<li class="tab">
+			<a class="tab-title" href="#tab-faq">
+				<i>
+					<svg>
+						<use xlink:href="#icon-help"></use>
+					</svg>
+				</i>
+				FAQ
+			</a>
+		</li>
+		{{/contains}}
+	{{/each}}
+	<li class="tab finish--order">
+		<a class="tab-title" href="#productLed-template">
+			<i>
+				<svg>
+					<use xlink:href="#icon-dollar"></use>
+				</svg>
+			</i>
+			Finish Order
+		</a>
+	</li>
+</ul>
+	
+<div class="tabs-contents">
+	{{#each  ( split product.description "<p>---</p>" ) }}   
+			{{#contains this "Description Tab"}}
+			<div class="tab-content is-active" id="tab-description">
+					{{#replace "<h3>Description Tab</h3>" this}}
+							{{ " "}}
+					{{/replace}}
+			</div>
+			{{/contains}}
+	{{/each}}
+	{{#each  ( split product.description "<p>---</p>" ) }}   
+			{{#contains this "Specifications Tab"}}
+			<div class="tab-content" id="tab-specifications">
+					{{#replace "<h3>Specifications Tab</h3>" this}}
+							{{ " "}}
+					{{/replace}}
+			</div>
+			{{/contains}}
+	{{/each}}
+	{{#each  ( split product.description "<p>---</p>" ) }}
+			{{#contains this "Download Tab"}}
+			<div class="tab-content" id="tab-download">
+					{{#replace "<h3>Download Tab</h3>" this}}
+							{{ " "}}
+					{{/replace}}
+			</div>
+			{{/contains}}
+	{{/each}}
+	<div class="tab-content" id="tab-reviews">
+		{{> components/products/reviews reviews=product.reviews product=product urls=urls}}
+	</div>
+	{{#each  ( split product.description "<p>---</p>" ) }}
+			{{#contains this "FAQ Tab"}}
+			<div class="tab-content" id="tab-faq">
+					{{#replace "<h3>FAQ Tab</h3>" this}}
+							{{ " "}}
+					{{/replace}}
+			</div>
+			{{/contains}}
+	{{/each}}
+</div>
+
+<!-- <ul class="tabs" data-tab>
+	<li class="tab is-active">
+		<a class="tab-title" href="#tab-description">
+			<img src="{{cdn '/img/icon-info.svg'}}" alt="" class="normal--image">
+			<img src="" alt="" class="active--image">
+			About</a>
+	</li>
+	<li class="tab">
+		<a class="tab-title" href="#tab-specifications">Specifications</a>
+	</li>
+	<li class="tab">
+		<a class="tab-title" href="#tab-download">Download</a>
+	</li>
+	<li class="tab">
+		<a class="tab-title" href="#tab-reviews">Reviews</a>
+	</li>
+	<li class="tab">
+		<a class="tab-title" href="#tab-faq">FAQ</a>
+	</li>
+	<li class="tab finish--order">
+		<a class="tab-title" href="">Finish Order</a>
+	</li>
+</ul>
+	
+<div class="tabs-contents">
+	<div class="tab-content is-active" id="tab-description">
+		<h3>About</h3>
+		<img src="https://cdn11.bigcommerce.com/s-43185/product_images/uploaded_images/rgb-150-backyard-rgb-installation.jpg" alt="">
+		<h4>Why Colorbright RGB LED Strip 150?</h4>
+		<p>The Outdoor ColorBright™ Color Changing 150 LED strip light is a reel of linear color changing LED chips mounted on a flexible strip of printed circuit board (PCB) with a strong adhesive backing. To achieve weather protection, the strips are enveloped in a silicone plastic casing. Sometimes referred to as “color changing LED tape lights,” the flexible design of LED strips means the lights can be installed in basically any space you can imagine. With these strips you can change the lights to nearly any color combination for a wide range of creative options. These lights work perfectly for outdoor installations as well as indoor spaces such as aquariums or in bathrooms that may be exposed to water.</p><p>The IP65 rating means that the LED strip lights are able to withstand jets and splashes of water from all sides. It cannot be submerged in water, but it will withstand the elements. We also recommend outdoor lights for use indoors in high splash areas or if you’re looking for a strip that is easier to clean.</p>
+		<h4>Colorbright RGB LED Strip 150 Is Great For:</h4>
+		<ul>
+			<li>Cove lighting</li>
+			<li>Signage</li>
+			<li>Backlighting</li>
+			<li>Edge lighting</li>
+			<li>Under cars and motorcycles</li>
+			<li>Store display lighting</li>
+			<li>Hotel lobbies</li>
+			<li>Architectural displays</li>
+			<li>Patio and barbecue areas</li>
+			<li>Backyard arbors and gazebos</li>
+			<li>Under cabinet lighting</li>
+			<li>Outside in signs and under rooftops</li>
+			<li>Fence lighting</li>
+			<li>Above Fish tanks</li>
+			<li>High splash areas</li>
+		</ul>
+		<h4>What To Look For When Comparing LEDs</h4>
+		<div class="image__with--text-section">
+			<div class="image__with--text-section-box">
+				<img src="https://cdn11.bigcommerce.com/s-43185/product_images/uploaded_images/rgbw.png" alt="RGB COLOR CHANGING + WHITE">
+				<h5>RGB COLOR CHANGING + WHITE</h5>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			</div>
+			<div class="image__with--text-section-box">
+				<img src="https://cdn11.bigcommerce.com/s-43185/product_images/uploaded_images/rgbw.png" alt="RGB COLOR CHANGING + WHITE">
+				<h5>RGB COLOR CHANGING + WHITE</h5>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			</div>
+			<div class="image__with--text-section-box">
+				<img src="https://cdn11.bigcommerce.com/s-43185/product_images/uploaded_images/rgbw.png" alt="RGB COLOR CHANGING + WHITE">
+				<h5>RGB COLOR CHANGING + WHITE</h5>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			</div>
+			<div class="image__with--text-section-box">
+				<img src="https://cdn11.bigcommerce.com/s-43185/product_images/uploaded_images/rgbw.png" alt="RGB COLOR CHANGING + WHITE">
+				<h5>RGB COLOR CHANGING + WHITE</h5>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			</div>
+			<div class="image__with--text-section-box">
+				<img src="https://cdn11.bigcommerce.com/s-43185/product_images/uploaded_images/rgbw.png" alt="RGB COLOR CHANGING + WHITE">
+				<h5>RGB COLOR CHANGING + WHITE</h5>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			</div>
+			<div class="image__with--text-section-box">
+				<img src="https://cdn11.bigcommerce.com/s-43185/product_images/uploaded_images/rgbw.png" alt="RGB COLOR CHANGING + WHITE">
+				<h5>RGB COLOR CHANGING + WHITE</h5>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			</div>
+			<div class="image__with--text-section-box">
+				<img src="https://cdn11.bigcommerce.com/s-43185/product_images/uploaded_images/rgbw.png" alt="RGB COLOR CHANGING + WHITE">
+				<h5>RGB COLOR CHANGING + WHITE</h5>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			</div>
+			<div class="image__with--text-section-box">
+				<img src="https://cdn11.bigcommerce.com/s-43185/product_images/uploaded_images/rgbw.png" alt="RGB COLOR CHANGING + WHITE">
+				<h5>RGB COLOR CHANGING + WHITE</h5>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			</div>
+			<div class="image__with--text-section-box">
+				<img src="https://cdn11.bigcommerce.com/s-43185/product_images/uploaded_images/rgbw.png" alt="RGB COLOR CHANGING + WHITE">
+				<h5>RGB COLOR CHANGING + WHITE</h5>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			</div>
+			<div class="image__with--text-section-box">
+				<img src="https://cdn11.bigcommerce.com/s-43185/product_images/uploaded_images/rgbw.png" alt="RGB COLOR CHANGING + WHITE">
+				<h5>RGB COLOR CHANGING + WHITE</h5>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			</div>
+			<div class="image__with--text-section-box">
+				<img src="https://cdn11.bigcommerce.com/s-43185/product_images/uploaded_images/rgbw.png" alt="RGB COLOR CHANGING + WHITE">
+				<h5>RGB COLOR CHANGING + WHITE</h5>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			</div>
+			<div class="image__with--text-section-box">
+				<img src="https://cdn11.bigcommerce.com/s-43185/product_images/uploaded_images/rgbw.png" alt="RGB COLOR CHANGING + WHITE">
+				<h5>RGB COLOR CHANGING + WHITE</h5>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			</div>
+			<div class="image__with--text-section-box">
+				<img src="https://cdn11.bigcommerce.com/s-43185/product_images/uploaded_images/rgbw.png" alt="RGB COLOR CHANGING + WHITE">
+				<h5>RGB COLOR CHANGING + WHITE</h5>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			</div>
+		</div>
+		<h4>Level Of Brightness - 2</h4>
+		<p>When comparing LED brightness in the market our standard of brightness is a lot ‘brighter’. ColorBright RGB LED Strip Light 150 has a brightness LEVEL 2 within the Flexfire Range. Need something brighter? Check out the Lorem ipsum dolor sit amet, consectetur adipiscing Series.</p>
+		<h4>Compatible Products</h4>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+		<div class="three__column--section">
+			<div class="three__column--section-box">
+				<h5>Remote Controls</h5>
+				<ul>
+					<li>- RGB Touch Series Remote</li>
+					<li>- Multi Zone RGB Remote</li>
+					<li>- Mini XR RGB Remote</li>
+					<li>- RGB Wireless Wall Dimmer</li>
+					<li>- RGB Tiny Controller</li>
+				</ul>
+			</div>
+			<div class="three__column--section-box">
+				<h5>Connectors</h5>
+				<ul>
+					<li>- RGB-C1</li>
+					<li>- RGB-C2</li>
+					<li>- RGB-C3</li>
+				</ul>
+			</div>
+			<div class="three__column--section-box">
+				<h5>Power Adapters</h5>
+				<ul>
+					<li>- Flexfire LEDs Plug-in Power</li>
+					<li>- 200W 12v Zurich LED Dimmable</li>
+				</ul>
+			</div>
+		</div>
+		<h4>Why To Buy From Flexfire LEDs</h4>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+	</div>
+	<div class="tab-content" id="tab-specifications">
+		<h3>Specifications</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+		<a href="">Click Here To See Specification Table Below</a>
+		<div class="four__column--section">
+			<div class="four__column--section-box">
+				<img src="https://cdn11.bigcommerce.com/s-43185/product_images/uploaded_images/rgbw.png" alt="RGB COLOR CHANGING + WHITE">
+				<h5>RGB COLOR CHANGING + WHITE</h5>
+			</div>
+			<div class="four__column--section-box">
+				<img src="https://cdn11.bigcommerce.com/s-43185/product_images/uploaded_images/rgbw.png" alt="RGB COLOR CHANGING + WHITE">
+				<h5>RGB COLOR CHANGING + WHITE</h5>
+			</div>
+			<div class="four__column--section-box">
+				<img src="https://cdn11.bigcommerce.com/s-43185/product_images/uploaded_images/rgbw.png" alt="RGB COLOR CHANGING + WHITE">
+				<h5>RGB COLOR CHANGING + WHITE</h5>
+			</div>
+			<div class="four__column--section-box">
+				<img src="https://cdn11.bigcommerce.com/s-43185/product_images/uploaded_images/rgbw.png" alt="RGB COLOR CHANGING + WHITE">
+				<h5>RGB COLOR CHANGING + WHITE</h5>
+			</div>
+			<div class="four__column--section-box">
+				<img src="https://cdn11.bigcommerce.com/s-43185/product_images/uploaded_images/rgbw.png" alt="RGB COLOR CHANGING + WHITE">
+				<h5>RGB COLOR CHANGING + WHITE</h5>
+			</div>
+			<div class="four__column--section-box">
+				<img src="https://cdn11.bigcommerce.com/s-43185/product_images/uploaded_images/rgbw.png" alt="RGB COLOR CHANGING + WHITE">
+				<h5>RGB COLOR CHANGING + WHITE</h5>
+			</div>
+			<div class="four__column--section-box">
+				<img src="https://cdn11.bigcommerce.com/s-43185/product_images/uploaded_images/rgbw.png" alt="RGB COLOR CHANGING + WHITE">
+				<h5>RGB COLOR CHANGING + WHITE</h5>
+			</div>
+			<div class="four__column--section-box">
+				<img src="https://cdn11.bigcommerce.com/s-43185/product_images/uploaded_images/rgbw.png" alt="RGB COLOR CHANGING + WHITE">
+				<h5>RGB COLOR CHANGING + WHITE</h5>
+			</div>
+			<div class="four__column--section-box">
+				<img src="https://cdn11.bigcommerce.com/s-43185/product_images/uploaded_images/rgbw.png" alt="RGB COLOR CHANGING + WHITE">
+				<h5>RGB COLOR CHANGING + WHITE</h5>
+			</div>
+		</div>
+			<div class="table__wrapper">
+				<h4>Specification Table</h4>
+				<div class="table__wrapper--content">
+					<div class="table__wrapper--box">
+						<p>Product no. SKU</p>
+						<p>IP65-CB-RGB-12V</p>
+						<p>IP65-CB-RGB-24V</p>
+						<select name="select__box" id="select__box">
+							<option value="sku_tw">IP65-CB-RGB-12V</option>
+							<option value="sku_tf">IP65-CB-RGB-24V</option>
+						</select>
+					</div>
+					<div class="table__wrapper--box">
+						<p>LED Chips / Foot <span>(Meter)</span></p>
+						<p class="sku_tw">9 LEDs/Foot <span>(30/Meter)</span></p>
+						<p class="sku_tf">9 LEDs/Foot <span>(30/Meter)</span></p>
+					</div>
+					<div class="table__wrapper--box">
+						<p>Voltage Input</p>
+						<p class="sku_tw">12V DC</p>
+						<p class="sku_tf">24V DC</p>
+					</div>
+					<div class="table__wrapper--box">
+						<p>Watts / Foot <span>(Meter)</span></p>
+						<p class="sku_tw">2.2 W/Ft <span>(7.2W/m)</span></p>
+						<p class="sku_tf">2.2 W/Ft <span>(7.2W/m)</span></p>
+					</div>
+					<div class="table__wrapper--box">
+						<p>Segment Lengths</p>
+						<p class="sku_tw">4” <span>(100mm)</span></p>
+						<p class="sku_tf">6 1/2” <span>(165mm)</span></p>
+					</div>
+					<div class="table__wrapper--box">
+						<p>Max Run Length In Series</p>
+						<p class="sku_tw">32’ 10” <span>(10 meters)</span></p>
+						<p class="sku_tf">48’ <span>(15 meters)</span></p>
+					</div>
+				</div>
+			</div>
+			<div class="table__wrapper">
+				<h4>Performance</h4>
+				<div class="table__wrapper--content">
+					<div class="table__wrapper--box">
+						<p>Product no. SKU</p>
+						<p>IP65-CB-RGB-12V</p>
+						<p>IP65-CB-RGB-24V</p>
+					</div>
+					<div class="table__wrapper--box">
+						<p>Color - CCT</span></p>
+						<p class="sku_tw">12V DC</p>
+						<p class="sku_tf">24V DC</p>
+					</div>
+					<div class="table__wrapper--box">
+						<p>Lumin. Flux <span>(Meter)</span></p>
+						<p class="sku_tw">12V DC</p>
+						<p class="sku_tf">24V DC</p>
+					</div>
+					<div class="table__wrapper--box">
+						<p>Luminous Efficacy <span>(Lumens / Watt)</span></p>
+						<p class="sku_tw">2.2 W/Ft <span>(7.2W/m)</span></p>
+						<p class="sku_tf">2.2 W/Ft <span>(7.2W/m)</span></p>
+					</div>
+					<div class="table__wrapper--box">
+						<p>CRI</p>
+						<p class="sku_tw">98</p>
+						<p class="sku_tf">98</p>
+					</div>
+					<div class="table__wrapper--box">
+						<p>Gamut Score Rg <span>(Color Sat.)</span></p>
+						<p class="sku_tw">32’ 10” <span>(10 meters)</span></p>
+						<p class="sku_tf">48’ <span>(15 meters)</span></p>
+					</div>
+					<div class="table__wrapper--box">
+						<p>Relative Fidelity Score <span>(Rf)</span></p>
+						<p class="sku_tw">12V DC</p>
+						<p class="sku_tf">24V DC</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	<div class="tab-content" id="tab-download">
+		<h3>Downloads</h3>
+		<div class="download--box">
+			<h4 class="is--active">Data Sheet</h4>
+			<div class="download--box-content is--active">
+				<div><p>Data Sheet</p><a href="">Download</a></div>
+			</div>
+		</div>
+		<div class="download--box">
+			<h4>Installation Sheet</h4>
+			<div class="download--box-content">
+				<div><p>Installation Sheet </p><a href="">Download</a></div>
+			</div>
+		</div>
+		<div class="download--box">
+			<h4>Photometric Results</h4>
+			<div class="download--box-content">
+				<div><p>2400K</p><a href="">Download</a></div>
+				<div><p>2700K</p><a href="">Download</a></div>
+				<div><p>3000K</p><a href="">Download</a></div>
+				<div><p>3500K</p><a href="">Download</a></div>
+				<div><p>4000K</p><a href="">Download</a></div>
+				<div><p>5000K</p><a href="">Download</a></div>
+			</div>
+		</div>
+		<div class="download--box">
+			<h4>IES and LDT Information</h4>
+			<div class="download--box-content">
+				<div><p>Vivid Blue:</p><p><a href="">IES FILE</a><a href="" class="before"> LDT FILE</a></p></div>
+				<div><p>Vivid Green:</p><p><a href="">IES FILE</a><a href="" class="before"> LDT FILE</a></p></div>
+				<div><p>Vivid Red:</p><p><a href="">IES FILE</a><a href="" class="before"> LDT FILE</a></p></div>
+				<div><p>Warm White 3000k:</p><p> <a href="">IES FILE</a><a href="" class="before"> LDT FILE</a></p></div>
+				<div><p>Cool White 6200k:</p><p> <a href="">IES FILE</a><a href="" class="before"> LDT FILE</a></p></div>
+				<div><p>Natural White 4200k:</p> <p> <a href="">IES FILE</a><a href="" class="before"> LDT FILE</a></p></div>
+				<div><p>UV Ultra Violet:</p> <p> <a href="">IES FILE</a><a href="" class="before"> LDT FILE</a></p></div>
+			</div>
+		</div>
+	</div>
+	<div class="tab-content" id="tab-reviews">
+		{{> components/products/reviews reviews=product.reviews product=product urls=urls}}
+	</div>
+	<div class="tab-content" id="tab-faq">
+		<h3>FAQ</h3>
+		<div class="faq__box">
+			<h4 class="is--active">What are the top 4 comparing factors to look for before purchasing LED strip lights?</h4>
+			<div class="faq__box--content is--active">
+				<p>1. Make sure you know the requirements for your project, then when looking at options, compare lumen output, CCT, and CRI.</p>
+				<p>2. Compare LED strip size and number of chips on the reel.</p>
+				<p> 3. Understand the wattage and voltage that the LED strip light uses.</p> 
+				<p>4. Make sure that the products have verifiable quality.</p>
+				<p>To read more details on these top considerations, <a href="">click here.</a></p>
+			</div>
+		</div>
+		<div class="faq__box">
+			<h4>What are the top 4 comparing factors to look for before purchasing LED strip lights?</h4>
+			<div class="faq__box--content">
+				<p>1. Make sure you know the requirements for your project, then when looking at options, compare lumen output, CCT, and CRI.</p>
+				<p>2. Compare LED strip size and number of chips on the reel.</p>
+				<p> 3. Understand the wattage and voltage that the LED strip light uses.</p> 
+				<p>4. Make sure that the products have verifiable quality.</p>
+				<p>To read more details on these top considerations, <a href="">click here.</a></p>
+			</div>
+		</div>
+		<div class="faq__box">
+			<h4>What are the top 4 comparing factors to look for before purchasing LED strip lights?</h4>
+			<div class="faq__box--content">
+				<p>1. Make sure you know the requirements for your project, then when looking at options, compare lumen output, CCT, and CRI.</p>
+				<p>2. Compare LED strip size and number of chips on the reel.</p>
+				<p> 3. Understand the wattage and voltage that the LED strip light uses.</p> 
+				<p>4. Make sure that the products have verifiable quality.</p>
+				<p>To read more details on these top considerations, <a href="">click here.</a></p>
+			</div>
+		</div>
+		<div class="faq__box">
+			<h4>What are the top 4 comparing factors to look for before purchasing LED strip lights?</h4>
+			<div class="faq__box--content">
+				<p>1. Make sure you know the requirements for your project, then when looking at options, compare lumen output, CCT, and CRI.</p>
+				<p>2. Compare LED strip size and number of chips on the reel.</p>
+				<p> 3. Understand the wattage and voltage that the LED strip light uses.</p> 
+				<p>4. Make sure that the products have verifiable quality.</p>
+				<p>To read more details on these top considerations, <a href="">click here.</a></p>
+			</div>
+		</div>
+		<div class="faq__box">
+			<h4>What are the top 4 comparing factors to look for before purchasing LED strip lights?</h4>
+			<div class="faq__box--content">
+				<p>1. Make sure you know the requirements for your project, then when looking at options, compare lumen output, CCT, and CRI.</p>
+				<p>2. Compare LED strip size and number of chips on the reel.</p>
+				<p> 3. Understand the wattage and voltage that the LED strip light uses.</p> 
+				<p>4. Make sure that the products have verifiable quality.</p>
+				<p>To read more details on these top considerations, <a href="">click here.</a></p>
+			</div>
+		</div>
+		<div class="faq__box">
+			<h4>What are the top 4 comparing factors to look for before purchasing LED strip lights?</h4>
+			<div class="faq__box--content">
+				<p>1. Make sure you know the requirements for your project, then when looking at options, compare lumen output, CCT, and CRI.</p>
+				<p>2. Compare LED strip size and number of chips on the reel.</p>
+				<p> 3. Understand the wattage and voltage that the LED strip light uses.</p> 
+				<p>4. Make sure that the products have verifiable quality.</p>
+				<p>To read more details on these top considerations, <a href="">click here.</a></p>
+			</div>
+		</div>
+		<div class="faq__box">
+			<h4>What are the top 4 comparing factors to look for before purchasing LED strip lights?</h4>
+			<div class="faq__box--content">
+				<p>1. Make sure you know the requirements for your project, then when looking at options, compare lumen output, CCT, and CRI.</p>
+				<p>2. Compare LED strip size and number of chips on the reel.</p>
+				<p> 3. Understand the wattage and voltage that the LED strip light uses.</p> 
+				<p>4. Make sure that the products have verifiable quality.</p>
+				<p>To read more details on these top considerations, <a href="">click here.</a></p>
+			</div>
+		</div>
+		<div class="faq__box">
+			<h4>What are the top 4 comparing factors to look for before purchasing LED strip lights?</h4>
+			<div class="faq__box--content">
+				<p>1. Make sure you know the requirements for your project, then when looking at options, compare lumen output, CCT, and CRI.</p>
+				<p>2. Compare LED strip size and number of chips on the reel.</p>
+				<p> 3. Understand the wattage and voltage that the LED strip light uses.</p> 
+				<p>4. Make sure that the products have verifiable quality.</p>
+				<p>To read more details on these top considerations, <a href="">click here.</a></p>
+			</div>
+		</div>
+		<div class="faq__box">
+			<h4>What are the top 4 comparing factors to look for before purchasing LED strip lights?</h4>
+			<div class="faq__box--content">
+				<p>1. Make sure you know the requirements for your project, then when looking at options, compare lumen output, CCT, and CRI.</p>
+				<p>2. Compare LED strip size and number of chips on the reel.</p>
+				<p> 3. Understand the wattage and voltage that the LED strip light uses.</p> 
+				<p>4. Make sure that the products have verifiable quality.</p>
+				<p>To read more details on these top considerations, <a href="">click here.</a></p>
+			</div>
+		</div>
+		<div class="faq__box">
+			<h4>What are the top 4 comparing factors to look for before purchasing LED strip lights?</h4>
+			<div class="faq__box--content">
+				<p>1. Make sure you know the requirements for your project, then when looking at options, compare lumen output, CCT, and CRI.</p>
+				<p>2. Compare LED strip size and number of chips on the reel.</p>
+				<p> 3. Understand the wattage and voltage that the LED strip light uses.</p> 
+				<p>4. Make sure that the products have verifiable quality.</p>
+				<p>To read more details on these top considerations, <a href="">click here.</a></p>
+			</div>
+		</div>
+		<div class="faq__box">
+			<h4>What are the top 4 comparing factors to look for before purchasing LED strip lights?</h4>
+			<div class="faq__box--content">
+				<p>1. Make sure you know the requirements for your project, then when looking at options, compare lumen output, CCT, and CRI.</p>
+				<p>2. Compare LED strip size and number of chips on the reel.</p>
+				<p> 3. Understand the wattage and voltage that the LED strip light uses.</p> 
+				<p>4. Make sure that the products have verifiable quality.</p>
+				<p>To read more details on these top considerations, <a href="">click here.</a></p>
+			</div>
+		</div>
+		<div class="faq__box">
+			<h4>What are the top 4 comparing factors to look for before purchasing LED strip lights?</h4>
+			<div class="faq__box--content">
+				<p>1. Make sure you know the requirements for your project, then when looking at options, compare lumen output, CCT, and CRI.</p>
+				<p>2. Compare LED strip size and number of chips on the reel.</p>
+				<p> 3. Understand the wattage and voltage that the LED strip light uses.</p> 
+				<p>4. Make sure that the products have verifiable quality.</p>
+				<p>To read more details on these top considerations, <a href="">click here.</a></p>
+			</div>
+		</div>
+		<div class="faq__box">
+			<h4>What are the top 4 comparing factors to look for before purchasing LED strip lights?</h4>
+			<div class="faq__box--content">
+				<p>1. Make sure you know the requirements for your project, then when looking at options, compare lumen output, CCT, and CRI.</p>
+				<p>2. Compare LED strip size and number of chips on the reel.</p>
+				<p> 3. Understand the wattage and voltage that the LED strip light uses.</p> 
+				<p>4. Make sure that the products have verifiable quality.</p>
+				<p>To read more details on these top considerations, <a href="">click here.</a></p>
+			</div>
+		</div>
+		<div class="faq__box">
+			<h4>What are the top 4 comparing factors to look for before purchasing LED strip lights?</h4>
+			<div class="faq__box--content">
+				<p>1. Make sure you know the requirements for your project, then when looking at options, compare lumen output, CCT, and CRI.</p>
+				<p>2. Compare LED strip size and number of chips on the reel.</p>
+				<p> 3. Understand the wattage and voltage that the LED strip light uses.</p> 
+				<p>4. Make sure that the products have verifiable quality.</p>
+				<p>To read more details on these top considerations, <a href="">click here.</a></p>
+			</div>
+		</div>
+		<div class="faq__box">
+			<h4>What are the top 4 comparing factors to look for before purchasing LED strip lights?</h4>
+			<div class="faq__box--content">
+				<p>1. Make sure you know the requirements for your project, then when looking at options, compare lumen output, CCT, and CRI.</p>
+				<p>2. Compare LED strip size and number of chips on the reel.</p>
+				<p> 3. Understand the wattage and voltage that the LED strip light uses.</p> 
+				<p>4. Make sure that the products have verifiable quality.</p>
+				<p>To read more details on these top considerations, <a href="">click here.</a></p>
+			</div>
+		</div>
+		<div class="faq__box">
+			<h4>What are the top 4 comparing factors to look for before purchasing LED strip lights?</h4>
+			<div class="faq__box--content">
+				<p>1. Make sure you know the requirements for your project, then when looking at options, compare lumen output, CCT, and CRI.</p>
+				<p>2. Compare LED strip size and number of chips on the reel.</p>
+				<p> 3. Understand the wattage and voltage that the LED strip light uses.</p> 
+				<p>4. Make sure that the products have verifiable quality.</p>
+				<p>To read more details on these top considerations, <a href="">click here.</a></p>
+			</div>
+		</div>
+		<div class="faq__box">
+			<h4>What are the top 4 comparing factors to look for before purchasing LED strip lights?</h4>
+			<div class="faq__box--content">
+				<p>1. Make sure you know the requirements for your project, then when looking at options, compare lumen output, CCT, and CRI.</p>
+				<p>2. Compare LED strip size and number of chips on the reel.</p>
+				<p> 3. Understand the wattage and voltage that the LED strip light uses.</p> 
+				<p>4. Make sure that the products have verifiable quality.</p>
+				<p>To read more details on these top considerations, <a href="">click here.</a></p>
+			</div>
+		</div>
+	</div>
+</div> -->
+
+
+<script>
+	var faqLinks = document.querySelectorAll('.faq__box h4');
+	var faqAns = document.querySelectorAll('.faq__box--content');
+	faqLinks.forEach(function(el) {
+		el.addEventListener('click', function() {
+			if(el.classList.contains('is--active')) {
+				el.classList.remove('is--active');
+				el.nextElementSibling.classList.remove('is--active');
+			} else {
+				faqLinks.forEach(el => el.classList.remove('is--active'));
+				faqAns.forEach(el => el.classList.remove('is--active'));
+				el.classList.add('is--active');
+				el.nextElementSibling.classList.add('is--active');
+			}
+		})
+	})
+	document.querySelector('#select__box').addEventListener('change', function() {
+   if(this.value == "sku_tf") {
+      document.querySelectorAll('.sku_tf').forEach(el => el.style.display = 'block');
+      document.querySelectorAll('.sku_tw').forEach(el => el.style.display = 'none')  
+    } else if(this.value == "sku_tw") {
+        document.querySelectorAll('.sku_tw').forEach(el => el.style.display = 'block');
+      document.querySelectorAll('.sku_tf').forEach(el => el.style.display = 'none'); 
+    }
+	})
+	document.querySelectorAll('.download--box h4').forEach(function(el) {
+    el.addEventListener('click', function() {
+        if(el.classList.contains('is--active')) {
+					el.classList.remove('is--active');
+					el.nextElementSibling.classList.remove('is--active');
+        } else {
+					document.querySelectorAll('.download--box h4').forEach(el => el.classList.remove('is--active'));
+					document.querySelectorAll('.download--box-content').forEach(el => el.classList.remove('is--active'));
+					el.classList.add('is--active');
+					el.nextElementSibling.classList.add('is--active');
+        }
+    })
+	})
+</script>

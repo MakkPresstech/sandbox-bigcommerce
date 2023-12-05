@@ -1,0 +1,138 @@
+.body {
+
+  .navBar.navBar--sub.navBar--account {
+    display: none;
+  }
+}
+
+.page_type__account_orderstatus,
+.page_type__editaccount {
+
+  .body {
+
+    .account {
+      display: none;
+    }
+  }
+}
+
+.page_type__page {
+
+  &.page_title__shopping_lists,
+  &.page_title__shopping_list,
+  &.page_title__address_book,
+  &.page_title__buy_again,
+  &.page_title__user_management,
+  &.page_title__quotes_list,
+  &.page_title__quote,
+  &.page_title__quick_order_pad,
+  &.page_title__dashboard,
+  &.page_title__order_detail,
+  &.page_title__invoices,
+  &.page_title__invoice_payment,
+  &.page_title__invoice_details,
+  &.page_title__invoice_payment_receipt {
+
+    .body {
+  
+      .page {
+  
+        .pagesLeft,
+        .pagesRight {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+// modal
+
+.tingle-modal,
+.modal {
+
+  .button {
+
+    &.modal-close--button {
+      padding: 1.15714rem 2.28571rem;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+// shopping list
+
+.form-wrap {
+
+  .form-field {
+
+    &.smaller {
+
+      .form-label {
+
+        &[for="product_qty"],
+        &[for] {
+          font-size: 0;
+          margin-bottom: 21px;
+        }
+      }
+    }
+  }
+}
+
+.productView-details {
+
+  .productView-options {
+
+    .form {
+
+      + .form-action {
+        margin-top: 0;
+
+        .form {
+          margin-top: 0;
+          margin-bottom: 0;
+
+          .dropdown-menu-button {
+            margin-bottom: 0;
+
+            .icon {
+              float: none;
+              width: 19px;
+              height: 19px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.creat-list-group {
+
+  .form-input {
+    padding: 0 5px;
+  }
+
+  div {
+
+    .button {
+
+      &.confirm {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+// masquerade
+
+.salerep-infobox {
+
+  .container {
+
+    .button {
+      line-height: 1.5rem;
+    }
+  }
+}

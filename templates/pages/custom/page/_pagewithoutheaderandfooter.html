@@ -1,0 +1,84 @@
+{{#partial "page-full"}}
+<div class="page-{{dashcase page.title}}">
+    <div class="container-full">
+        <div class="noheaderTop">
+            <div class="noheaderTop-left">
+                <a href="https://www.flexfireleds.com"><img src="/images/stencil/original/flexfire_logo_1455010661__50409.original.png"></a>
+            </div>
+            <div class="noheaderTop-right">
+                <h2>Qualify in Minutes. Get a Quick Quote. Call Us Today: 925 278 6565</h2>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <main class="page">
+            {{#unless theme_settings.hide_page_heading }}
+                <h1 class="page-heading">{{ page.title }}</h1>
+            {{/unless}}
+        
+            {{#if page.sub_pages}}
+            <nav class="navBar navBar--sub">
+                <ul class="navBar-section account-navigation">
+                {{#each page.sub_pages}}
+                    <li class="navBar-item"><a class="navBar-action" href="{{url}}">{{title}}</a></li>
+                {{/each}}
+                </ul>
+            </nav>
+            {{/if}}
+                
+                    <div class="page-content">
+                        {{#replace '%%Syndicate%%' page.content}}
+                            {{> components/page/rss_feed}}
+                        {{else}}
+                            {{{page.content}}}
+                        {{/replace}}
+                    </div>
+                
+            {{#if page.feed}}
+                <ul>
+                    {{#each page.feed}}
+                        <li>
+                            <h6><a href="{{url}}" target="_blank">{{title}}</a></h6>
+                            <p>{{content}}</p>
+                        </li>
+                    {{/each}}
+                </ul>
+            {{/if}}
+        </main>
+    </div>    
+</div>   
+
+{{/partial}}
+
+{{> layout/base}}
+
+{{#if page.title '===' "Sign up Thank you copy"}}
+
+<style> 
+ .newsletter-home {
+     display: none;
+ }
+
+</style>
+
+{{/if}}
+
+<style type="text/css" media="all">
+    .banner-top {
+        display: none;
+    }
+
+    .header {
+        display: none;
+    }
+    
+    .footer {
+        display: none;
+    }
+    
+    .body {
+        margin: 0;
+    }
+    
+</style>

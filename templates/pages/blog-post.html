@@ -1,0 +1,752 @@
+---
+blog:
+    recent_posts:
+        limit: 3
+---
+
+{{#partial "page"}}
+
+
+
+{{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+
+<div id="post-tag">{{#each blog.post.tags}}{{name}}{{/each}}</div>    
+
+<div class="single-blog-design-post">
+    
+    {{> components/blog/post post=blog.post show_tags=true}}
+    
+</div>
+
+
+<!--<div class="recent-blog-section">-->
+<!--    <h2>Related Articles</h2>-->
+<!--    <div class="recent-blog-design">-->
+<!--        {{#each blog.recent_posts}}-->
+<!--            <div class="item">-->
+<!--                <div class="img">-->
+<!--                    {{#if thumbnail}}-->
+<!--                        <a href="{{url}}">-->
+<!--                            <img src="{{getImage thumbnail 'blog_size'}}" alt="{{thumbnail.alt}}" title="{{thumbnail.alt}}">-->
+<!--                        </a>-->
+<!--                    {{/if}}-->
+<!--                </div>-->
+<!--                <div class="content">-->
+<!--                    <h3 class="blog-title">-->
+<!--                        <a href="{{url}}">{{title}}</a>-->
+<!--                    </h3>-->
+<!--                    <p class="blog-date-author-box">-->
+<!--                        <span class="blog-date-published">{{date_published}}</span>|<span class="blog-post-author">{{author}}</span>  -->
+<!--                    </p>-->
+<!--                    <p class="summary">{{{summary}}}</p>-->
+<!--                    <a href="{{url}}" class="hyper-link">Read the post -->
+<!--                        <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+<!--                            <path d="M6 12H18M18 12L13 7M18 12L13 17" stroke="#00f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>-->
+<!--                        </svg>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        {{/each}}-->
+<!--    </div>-->
+<!--</div>-->
+
+<div class="recentblogpostcontainer">
+    <div class="recentblogposttitle">
+        <h2>Related Articles</h2>
+    </div>
+    <div class="recentblogpost"></div>
+</div>
+
+
+
+<div class="custom-blog-form-section">
+    <div class="custom-blog-design">
+        <div class="heading">
+            <h2>Subscribe to Our Newsletter an Get an 10% Instant Coupon</h2>
+        </div>
+        <div class="form-blog">
+            <div>
+                <div class="margintableblog" style="margin-left:10%"; "margin-right: 5%">
+                    <table style="width: 90%;" border="0" align="center">
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+                                    <script>
+                                    hbspt.forms.create({
+                                    region: "na1",
+                                    portalId: "4711502",
+                                    formId: "03b494bb-fb63-440c-a0db-df523f8005cd"
+                                    });
+                                    </script>
+                                </td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="blog-footer">
+    <div class="footer-blog-section">
+        <div class="img">
+            <img src="https://cdn11.bigcommerce.com/s-coffa3m5zp/images/stencil/original/image-manager/rectangle-35.png" />
+        </div>
+        <div class="content">
+            <h2>Our project design team is here to assist</h2>
+            <p>Our Flexfire LEDs team is made up of lighting experts that can assist whether you need a custom or out of the box lighting solution. We are always here to offer professional lighting advice, project design help, and product selection assistance. Please contact us with any lighting question or project need.</p>
+            <a href="">Chat With Us</a>
+        </div>
+    </div>
+</div>
+
+<style>
+.body.pagetype-blog_post .container {
+    max-width: 100%;
+    padding: 0;
+}
+.single-blog-design-post {
+    margin-bottom: 6rem;
+}
+.single-blog-design-post .blog-post-figure {
+    width: 100%;
+    padding: 0 16px;
+    max-width: 927px;
+}
+.single-blog-design-post .blog-post-figure .blog-thumbnail {
+    max-width: 100%;
+    min-height: 400px;
+    overflow: hidden;
+}
+.single-blog-design-post .blog-post-figure .blog-thumbnail a {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.single-blog-design-post .blog-post-figure .blog-thumbnail:after {
+    display: none;
+}
+.single-blog-design-post .blog-post-figure .blog-thumbnail img.lazyautosizes {
+    position: inherit;
+    width: 100%;
+}
+.single-blog-design-post .blog-post-body {
+    width: 100%;
+    /*max-width: 800px;*/
+}
+.single-blog-design-post .blog-post-body .date-tag {
+    text-align: left;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    margin: 3rem 0 5rem 9.5rem;
+    max-width: 927px;
+    padding: 0 16px;
+}
+.single-blog-design-post .blog-post-body .date-tag .date-design {
+    color: #545454;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+}
+.single-blog-design-post .blog-post-body .date-tag .tag-design {
+    color: #1D1D1F;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 135%;
+    letter-spacing: 0.319px;
+    border: 1px solid #1d1d1f;
+    border-radius: 50px;
+    padding: 8px 20px;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+
+.single-blog-design-post .blog-post-body .date-tag .tag-design:hover{
+    background: #2c4ecf;
+    border: 1px solid #2c4ecf;
+    color: #fff;
+    transition: all 0.4s ease-in-out;
+}
+
+.single-blog-design-post .blog-post-body .blog-header {
+    margin-top: 6rem;
+    margin-left: 9.5rem;
+    padding: 0 16px;
+    max-width: 927px;
+}
+
+body.page_type__blog_post .recentblogpostcontainer .recentblogposttitle,
+body.page_type__blog_post .recentblogpostcontainer .recentblogpost{
+    margin-left: 9.5rem;
+    padding: 0 16px;
+    max-width: 927px;
+}
+
+.single-blog-design-post .blog-post-body .blog-header .blog-title {
+    font-size: 36px;
+    line-height: 38px;
+    text-align: left;
+    margin: 0;
+}
+.single-blog-design-post .blog-post-body .blog-header .blog-title a {
+    color: #151516;
+}
+.single-blog-design-post .blog-post-body .blog-header .blog-date-author-box {
+    display: none;
+}
+
+.single-blog-text {
+    margin-top: 24px;
+    text-align: left;
+}
+.single-blog-text {
+    margin-top: 24px;
+}
+.single-blog-text p {
+    color: #2A2A2C;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+.single-blog-text p a {
+    text-decoration: underline;
+    color: #00f;
+}
+.single-blog-text p strong {
+    color: #343940;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 32px;
+}
+
+.single-blog-text h4 {
+    color: #151516;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 38px;
+    margin-bottom: 16px;
+    margin-top: 36px;
+}
+.single-blog-text .full-img {
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+.single-blog-text .two-img {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 24px;
+    margin: 24px 0px;
+}
+
+.single-blog-text .two-img img {
+    width: 100%;
+    float: left;
+}
+
+
+.custom-blog-form-section {
+    background: #dedfea;
+}
+.custom-blog-form-section .custom-blog-design {
+    padding: 4rem 8rem 4rem;
+    max-width: 151.71429rem;
+    margin: 0 auto;
+    text-align: center;
+}
+.custom-blog-design .heading h2 {
+    color: #000;
+    margin-bottom: 25px;
+}
+.hs-form-03b494bb-fb63-440c-a0db-df523f8005cd_b26a6199-f27b-4781-adc8-e693ab1a1ff0.hs-form {
+    width: 100%;
+}
+
+.blog-post .article-head-img{
+    display: none;
+}
+
+.blog-post-figure .article-head-img{
+    height: 300px;
+}
+
+.blog-post-figure .article-head-img img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.blog-footer {
+    background: #f6f7fa;
+}
+.footer-blog-section {
+    padding: 3rem 8rem 0;
+    max-width: 151.71429rem;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.footer-blog-section .img {
+    width: 100%;
+    max-width: 50%;
+}
+.footer-blog-section .content {
+    width: 100%;
+    max-width: 50%;
+}
+.footer-blog-section .content h2 {
+    font-weight: 500;
+    color: #1D1D1F;
+    font-size: 24px;
+    margin-bottom: 20px;
+    line-height: 135%;
+    letter-spacing: 0.319px;
+}
+.footer-blog-section .content p {
+    color: #3D3D3D;
+    font-weight: 400;
+    line-height: 24px;
+    font-size: 14px;
+}
+.footer-blog-section .content a {
+    border: 1px solid #1D1D1F;
+    color: #1D1D1F;
+    display: block;
+    width: 100%;
+    max-width: max-content;
+    text-align: center;
+    padding: 12px 24px;
+    border-radius: 50px;
+    margin-top: 30px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 135%;
+    letter-spacing: 0.319px;
+    transition: all 0.4s ease-in-out;
+}
+
+.footer-blog-section .content a:hover {
+    background: #2c4ecf;
+    border: 1px solid #2c4ecf;
+    color: #fff;
+    transition: all 0.4s ease-in-out;
+}
+
+.page_type__blog_post .newsletter-home.custom-form-background {
+    display: none;
+}
+.page_type__blog_post footer.footer {
+    border-top: 0;
+}
+.single-blog-design-post .tags {
+    display: none;
+}
+
+.recent-blog-section {
+    max-width: 151.71429rem;
+    margin: 1rem auto 5rem;
+    padding: 2rem 8rem 2rem;
+}
+
+.recent-blog-section h2 {
+    color: #1D1D1F;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 135%; /* 37.8px */
+    letter-spacing: 0.319px;
+}
+.recent-blog-section .recent-blog-design {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 20px;
+    row-gap: 40px;
+    margin: 1.5rem 0 0;
+}
+.recent-blog-design .item .img {
+    margin-bottom: 15px;
+}
+.recent-blog-design .item .content .blog-title {
+    margin: 0 0 16px;
+    font-size: 24px;
+    line-height: 135%;
+}
+.recent-blog-design .item .content .blog-title a {
+    color: #000;
+}
+.recent-blog-design .item .content .blog-date-author-box {
+    color: #545454;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    display: flex;
+    gap: 5px;
+}
+.recent-blog-design .item .content .summary {
+    color: #3D3D3D;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+}
+.recent-blog-design .item .content .hyper-link {
+    display: flex;
+    margin-top: 16px;
+    gap: 5px;
+    align-items: center;
+    color: #00f;
+    font-weight: 500;
+}
+
+div#post-tag {
+    display: none;
+}
+
+body.page_type__blog_post .recentblogpostcontainer .recentblogpost {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    padding-bottom: 60px !important;
+}
+
+.recentblogpost article.blog .blog-post-figure {
+    width: 100%;
+}
+
+.recentblogpost article.blog .blog-post-figure figure.blog-thumbnail{
+    max-width: 100%;
+}
+
+.recentblogpost article.blog .blog-post-figure figure.blog-thumbnail::after {
+    content: unset;
+}
+
+.recentblogpost article.blog .blog-post-figure figure.blog-thumbnail img{
+    position: static;
+}
+
+.recentblogpost article.blog .blog-post-body{
+    width: 100%;
+    text-align: left;
+}
+
+.recentblogpost article.blog .blog-post-body .blog-title{
+    font-size: 24px;
+    color: #000000;
+    margin: 0 0 16px;
+    min-height: 72px;
+}
+
+.recentblogpost article.blog .blog-post-body .blog-title a{
+    color: #000000;
+}
+
+.recentblogpost article.blog .blog-post-body .blog-date-author-box{
+    color: #545454;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.recentblogpost article.blog .blog-post-body .blog-date-published{
+    padding-right: 6px;
+}
+
+.recentblogpost article.blog .blog-post-body .blog-post-author{
+    padding-left: 6px;
+}
+
+.recentblogpost article.blog .blog-post-body .blog-post p{
+    color: #3D3D3D;
+}
+
+.recentblogpost article.blog .blog-post-body .blog-post a{
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.recentblogposttitle h2 {
+    font-size: 28px;
+    color: #1D1D1F;
+    margin-bottom: 20px;
+}
+
+.recentblogpost .blog+.blog{
+    margin-top: 0; 
+     padding-top: 0;
+}
+
+.recentblogpostcontainer .blog-post-body .blog-post-author ul.tags{
+    margin: 0;
+    display: flex;
+    gap: 8px;
+}
+
+.recentblogpostcontainer .blog-post-body .blog-post-author ul.tags .tag a{
+    font-size: 1.5rem;
+    color: #545454;
+    text-transform: capitalize;
+}
+
+.single-blog-design-post .blog-post-body .blog-post {
+    margin-left: 9.5rem;
+    padding: 0 16px;
+    max-width: 927px;
+}
+
+/*.body.pagetype-blog_post .container {*/
+/*    max-width: 1280px !important;*/
+/*}*/
+
+
+
+@media (max-width: 1261px) {
+.single-blog-design-post .blog-post-body {
+    padding: 0rem 1.5rem 0;
+}
+.footer-blog-section {
+    padding: 3rem 1.5rem 0;
+}
+
+}
+
+@media (min-width: 1025px){
+   body.page_type__blog_post .single-blog-design-post .blog-post-body,
+   body.page_type__blog_post .recentblogpostcontainer{
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 80px;
+    }
+}
+
+@media (max-width: 990px) {
+.footer-blog-section .img {
+    max-width: 100%;
+    order: 1;
+    text-align: center;
+}
+.footer-blog-section .content {
+    max-width: 100%;
+    order: 0;
+    text-align: center;
+}
+.footer-blog-section .content a {
+    max-width: 500px;
+    margin: 30px auto 0px
+}
+
+.recentblogpost{
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.single-blog-design-post .blog-post-body .date-tag{
+    margin: 2rem auto;
+}
+
+}
+
+/*@media (min-width: 769px){*/
+/*    body.body.page_type__blog_post .single-blog-design-post .blog-post-body,*/
+/*    body.page_type__blog_post .recentblogpostcontainer{*/
+/*        max-width: 1024px;*/
+/*        margin: 0 auto;*/
+/*    }*/
+/*}*/
+
+/*@media (min-width: 601px){*/
+/*    body.body.page_type__blog_post .single-blog-design-post .blog-post-body,*/
+/*    body.page_type__blog_post .recentblogpostcontainer{*/
+/*    max-width: 768px;*/
+/*    margin: 0 auto;*/
+/*}*/
+/*}*/
+
+@media (max-width: 525px) {
+.footer-blog-section .content {
+    text-align: left;
+}
+
+.recentblogpost{
+    grid-template-columns: 1fr;
+}
+
+.custom-blog-form-section .custom-blog-design{
+    padding: 4rem 2rem 4rem;
+}
+
+.custom-blog-form-section .margintableblog{
+    margin: 0 !important;
+} 
+
+.custom-blog-form-section .margintableblog table{
+    width: 100% !important;
+}
+
+.custom-blog-form-section .margintableblog table tbody tr td{
+    padding: 0 !important;
+}
+
+.single-blog-text .two-img{
+    grid-template-columns: 1fr;
+}
+
+.blog-post-tab .tag-design{
+    row-gap: 6px;
+    column-gap: 8px;
+}
+
+}
+</style>
+
+<script>
+    var img = document.querySelector(".article-head-img");
+    var blogfigure = document.querySelector(".blog-post-figure");
+    blogfigure.innerHTML = "";
+    const articleHeadImgHtml = img.outerHTML;
+    blogfigure.innerHTML += articleHeadImgHtml;
+    
+    function formatDate(inputDate) {
+    const inputDateStr = inputDate;
+
+    // Parse the input date string
+    const date = new Date(inputDateStr);
+
+    // Format the date as "MM/DD/YYYY"
+    const formattedDate = `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`;
+
+    console.log(formattedDate);
+    
+    return formattedDate;
+}
+</script>
+
+<script>
+var Apikey = $('#apikey').val();
+var tagkey = $('#post-tag').val();
+// Function to retrieve and insert new data
+function taggetAndInsertNewData() {
+    fetch('/graphql', {
+                        method: 'POST',
+                        mode: 'cors',
+                        headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': 'Bearer ' + Apikey,
+                 },
+                        body: JSON.stringify({
+                                query: `query tagblogsearch {
+                                                            site {
+                                                                    content {
+                                                                                blog {
+                                                                name
+                                                                id
+                                                                path
+                                                                posts(first:3, filters: {tags: "lighting-projects"}) {
+                                                                                    edges {
+                                                                                            node {
+                                                                                                    name
+                                                                                                    path
+                                                                                                    tags
+                                                                                                    id
+                                                                                                    plainTextSummary
+                                                                                                    thumbnailImage {
+                                                                                                                    url(width: 10)
+                                                                                                                   }
+                                                                                                    publishedDate { 
+                                                                                                                    utc 
+                                                                                                    }
+                                                                                                    author
+                                                                                                 }
+                                                                                         }
+                                                                                 }
+                                                             }
+                                                                            }   
+                                                                 }
+                                                         }`,
+                                }),
+                        })
+    .then(tagres => tagres.json())
+    .then(tagres => {
+        console.log("Aakash Sharma is")
+                    console.log(tagres);
+                    console.log(tagres);
+                    // Store the data in localStorage
+                    localStorage.setItem('tagblogData', JSON.stringify(tagres.data.site.content.blog.posts.edges));
+                  })
+    .catch(function (error) {
+                                console.error('Fetch error: ' + error);
+                            });
+}
+
+taggetAndInsertNewData();
+
+</script>
+
+<script>
+function tagbloggetpost(){
+    let tagdataArray = localStorage.getItem('tagblogData');
+    let taghtml_box = []
+    let tagprints = JSON.parse(tagdataArray);
+    tagprints.map((item)=>{  
+                        let tagimage = item.node.thumbnailImage.url;
+                        let plainTextSummary = item.node.plainTextSummary;
+                        if (tagimage.includes('10w')) {
+                                        tagimage = tagimage.replace('10w', '610w');
+                                    }
+                        let tagauthor = item.node.author;
+                        let tagsin = [];
+                        item.node.tags.forEach((tag)=>{
+                                                        let tagesdata = `<li class="tag"><a>${tag}</a></li>`;
+                                                        tagsin.push(tagesdata)
+                                                       })
+                        let tagresult = tagsin.join(""); 
+                        let tagdateandpost = formatDate(item.node.publishedDate.utc);
+                        let taginhtml = `<article class="blog">
+                                        <div class="blog-post-figure">
+                                            <figure class="blog-thumbnail">
+                                                <a href="${item.node.path}">
+                                                    <img class="lazyautosizes lazyloaded" data-sizes="auto" src="${tagimage}" data-src="${tagimage}" alt="${item.node.name}" title="${item.node.name}">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="blog-post-body">
+                                            <header class="blog-header">
+                                                <h2 class="blog-title">
+                                                    <a href="${item.node.path}">${item.node.name}</a>
+                                                </h2>
+                                                <div class="blog-date-author-box">
+                                                    <span class="blog-date-published">${tagdateandpost}</span>|<span class="blog-post-author"><ul class="tags">${tagresult}</ul></span>  
+                                                </div>
+                                            </header>
+                                            <div class="blog-post">
+                                                <p>${plainTextSummary} …</p>
+                                                <a href="${item.node.path}">Read the post 
+                                                    <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M6 12H18M18 12L13 7M18 12L13 17" stroke="#00f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </article>`;
+                        taghtml_box.push(taginhtml);
+                        })
+    let tagresult = taghtml_box.join("");
+    document.querySelector('.recentblogpost').innerHTML = tagresult
+    }
+</script>
+
+<script>
+setTimeout(()=>{
+        tagbloggetpost()
+},2000)
+</script>
+
+{{/partial}}
+{{> layout/base}}
